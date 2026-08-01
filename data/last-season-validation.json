@@ -1,0 +1,3224 @@
+{
+ "version": 1,
+ "settings": {
+  "skinValue": 100,
+  "bonusEnabledByWeek": {
+   "1": true,
+   "2": true,
+   "3": true,
+   "4": true,
+   "5": true,
+   "6": true,
+   "7": true,
+   "8": true,
+   "9": true,
+   "10": true,
+   "11": true,
+   "12": true,
+   "13": true,
+   "14": true,
+   "15": true,
+   "16": true,
+   "17": true,
+   "18": true,
+   "WC": true,
+   "DIV": true,
+   "CC": true,
+   "SB": true
+  }
+ },
+ "results": {
+  "2": {
+   "Eagles-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 9
+   },
+   "Giants-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "49ers-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Patriots-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Seahawks-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Bills-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 9
+   },
+   "Colts-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Panthers-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Broncos-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Jaguars-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Ravens-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 9
+   },
+   "Texans-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Titans-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Cowboys-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Dolphins-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Chiefs-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Jets-L": {
+    "result": "L",
+    "pointsFor": 6,
+    "pointsAgainst": 20
+   },
+   "Bengals-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Packers-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Falcons-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Lions-W": {
+    "result": "W",
+    "pointsFor": 42,
+    "pointsAgainst": 6
+   },
+   "Browns-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Chargers-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 9
+   },
+   "Raiders-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Falcons-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Commanders-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Saints-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Buccaneers-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Rams-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Cardinals-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   }
+  },
+  "3": {
+   "Eagles-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 9
+   },
+   "Giants-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "49ers-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Patriots-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Seahawks-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Bills-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Colts-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Panthers-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Broncos-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Jaguars-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Ravens-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Texans-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Titans-L": {
+    "result": "L",
+    "pointsFor": 6,
+    "pointsAgainst": 20
+   },
+   "Cowboys-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Dolphins-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Chiefs-W": {
+    "result": "W",
+    "pointsFor": 42,
+    "pointsAgainst": 6
+   },
+   "Jets-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Bengals-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Packers-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Falcons-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Lions-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 9
+   },
+   "Browns-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Chargers-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Raiders-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Falcons-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Commanders-W": {
+    "result": "W",
+    "pointsFor": 42,
+    "pointsAgainst": 6
+   },
+   "Saints-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Buccaneers-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Rams-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Cardinals-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   }
+  },
+  "4": {
+   "Eagles-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 9
+   },
+   "Giants-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "49ers-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Patriots-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Seahawks-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Bills-W": {
+    "result": "W",
+    "pointsFor": 42,
+    "pointsAgainst": 6
+   },
+   "Colts-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Panthers-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Broncos-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Jaguars-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Ravens-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Texans-W": {
+    "result": "W",
+    "pointsFor": 42,
+    "pointsAgainst": 6
+   },
+   "Titans-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Cowboys-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Dolphins-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Chiefs-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Jets-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Bengals-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Packers-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Falcons-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Lions-W": {
+    "result": "W",
+    "pointsFor": 42,
+    "pointsAgainst": 6
+   },
+   "Browns-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Chargers-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Raiders-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Falcons-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Commanders-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Saints-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Buccaneers-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Rams-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Cardinals-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   }
+  },
+  "5": {
+   "Eagles-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Giants-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "49ers-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Patriots-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Seahawks-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Bills-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Colts-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Panthers-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Broncos-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Jaguars-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Ravens-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Texans-W": {
+    "result": "W",
+    "pointsFor": 42,
+    "pointsAgainst": 6
+   },
+   "Titans-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Cowboys-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Dolphins-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Chiefs-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Jets-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Bengals-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Packers-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Falcons-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Lions-W": {
+    "result": "W",
+    "pointsFor": 42,
+    "pointsAgainst": 6
+   },
+   "Browns-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Chargers-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Raiders-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Falcons-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Commanders-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 9
+   },
+   "Saints-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Buccaneers-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Rams-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Cardinals-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   }
+  },
+  "6": {
+   "Eagles-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Giants-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "49ers-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Patriots-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Seahawks-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Bills-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Colts-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Panthers-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Broncos-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Jaguars-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Ravens-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Texans-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Titans-L": {
+    "result": "L",
+    "pointsFor": 6,
+    "pointsAgainst": 20
+   },
+   "Cowboys-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Dolphins-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Chiefs-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Jets-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Bengals-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Packers-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Falcons-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Lions-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Browns-L": {
+    "result": "L",
+    "pointsFor": 6,
+    "pointsAgainst": 20
+   },
+   "Chargers-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Raiders-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Falcons-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Commanders-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Saints-L": {
+    "result": "L",
+    "pointsFor": 6,
+    "pointsAgainst": 20
+   },
+   "Buccaneers-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Rams-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Cardinals-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   }
+  },
+  "7": {
+   "Eagles-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 9
+   },
+   "Giants-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "49ers-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Patriots-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Seahawks-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Bills-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Colts-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Panthers-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Broncos-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 9
+   },
+   "Jaguars-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Ravens-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Texans-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Titans-L": {
+    "result": "L",
+    "pointsFor": 6,
+    "pointsAgainst": 20
+   },
+   "Cowboys-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Dolphins-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Chiefs-W": {
+    "result": "W",
+    "pointsFor": 42,
+    "pointsAgainst": 6
+   },
+   "Jets-L": {
+    "result": "L",
+    "pointsFor": 6,
+    "pointsAgainst": 20
+   },
+   "Bengals-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Packers-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Falcons-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Lions-W": {
+    "result": "W",
+    "pointsFor": 42,
+    "pointsAgainst": 6
+   },
+   "Browns-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Chargers-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Raiders-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Falcons-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Commanders-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Saints-L": {
+    "result": "L",
+    "pointsFor": 6,
+    "pointsAgainst": 20
+   },
+   "Buccaneers-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Rams-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Cardinals-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   }
+  },
+  "8": {
+   "Eagles-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Giants-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "49ers-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Patriots-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Seahawks-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Bills-W": {
+    "result": "W",
+    "pointsFor": 42,
+    "pointsAgainst": 6
+   },
+   "Colts-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Panthers-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Broncos-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 9
+   },
+   "Jaguars-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Ravens-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 9
+   },
+   "Texans-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Titans-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Cowboys-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Dolphins-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Chiefs-W": {
+    "result": "W",
+    "pointsFor": 42,
+    "pointsAgainst": 6
+   },
+   "Jets-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Bengals-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Packers-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Falcons-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Lions-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Browns-L": {
+    "result": "L",
+    "pointsFor": 6,
+    "pointsAgainst": 20
+   },
+   "Chargers-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Raiders-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Falcons-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Commanders-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Saints-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Buccaneers-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Rams-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Cardinals-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   }
+  },
+  "9": {
+   "Eagles-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Giants-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "49ers-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Patriots-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Seahawks-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Bills-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Colts-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Panthers-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Broncos-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Jaguars-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Ravens-W": {
+    "result": "W",
+    "pointsFor": 42,
+    "pointsAgainst": 6
+   },
+   "Texans-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Titans-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Cowboys-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Dolphins-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Chiefs-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Jets-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Bengals-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Packers-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Falcons-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Lions-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Browns-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Chargers-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Raiders-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Falcons-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Commanders-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Saints-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Buccaneers-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Rams-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Cardinals-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   }
+  },
+  "10": {
+   "Eagles-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 9
+   },
+   "Giants-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "49ers-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Patriots-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Seahawks-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Bills-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Colts-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Panthers-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Broncos-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Jaguars-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Ravens-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Texans-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Titans-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Cowboys-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Dolphins-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Chiefs-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Jets-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Bengals-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Packers-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Falcons-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Lions-W": {
+    "result": "W",
+    "pointsFor": 42,
+    "pointsAgainst": 6
+   },
+   "Browns-L": {
+    "result": "L",
+    "pointsFor": 6,
+    "pointsAgainst": 20
+   },
+   "Chargers-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Raiders-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Falcons-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Commanders-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Saints-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Buccaneers-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Rams-W": {
+    "result": "W",
+    "pointsFor": 42,
+    "pointsAgainst": 6
+   },
+   "Cardinals-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   }
+  },
+  "11": {
+   "Eagles-W": {
+    "result": "W",
+    "pointsFor": 42,
+    "pointsAgainst": 6
+   },
+   "Giants-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "49ers-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Patriots-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Seahawks-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Bills-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 9
+   },
+   "Colts-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Panthers-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Broncos-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Jaguars-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Ravens-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Texans-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Titans-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Cowboys-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Dolphins-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Chiefs-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Jets-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Bengals-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Packers-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Falcons-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Lions-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Browns-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Chargers-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Raiders-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Falcons-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Commanders-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Saints-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Buccaneers-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Rams-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 9
+   },
+   "Cardinals-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   }
+  },
+  "12": {
+   "Eagles-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Giants-L": {
+    "result": "L",
+    "pointsFor": 6,
+    "pointsAgainst": 20
+   },
+   "49ers-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Patriots-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Seahawks-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Bills-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Colts-L": {
+    "result": "L",
+    "pointsFor": 6,
+    "pointsAgainst": 20
+   },
+   "Panthers-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Broncos-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Jaguars-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Ravens-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 9
+   },
+   "Texans-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Titans-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Cowboys-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Dolphins-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Chiefs-W": {
+    "result": "W",
+    "pointsFor": 42,
+    "pointsAgainst": 6
+   },
+   "Jets-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Bengals-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Packers-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Falcons-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Lions-W": {
+    "result": "W",
+    "pointsFor": 42,
+    "pointsAgainst": 6
+   },
+   "Browns-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Chargers-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Raiders-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Falcons-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Commanders-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Saints-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Buccaneers-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Rams-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Cardinals-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   }
+  },
+  "13": {
+   "Eagles-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Giants-L": {
+    "result": "L",
+    "pointsFor": 6,
+    "pointsAgainst": 20
+   },
+   "49ers-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Patriots-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Seahawks-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Bills-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Colts-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Panthers-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Broncos-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Jaguars-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Ravens-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Texans-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 9
+   },
+   "Titans-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Cowboys-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Dolphins-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Chiefs-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Jets-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Bengals-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Packers-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Falcons-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Lions-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Browns-L": {
+    "result": "L",
+    "pointsFor": 6,
+    "pointsAgainst": 20
+   },
+   "Chargers-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Raiders-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Falcons-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Commanders-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Saints-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Buccaneers-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Rams-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Cardinals-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   }
+  },
+  "14": {
+   "Eagles-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Giants-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "49ers-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Patriots-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Seahawks-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Bills-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Colts-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Panthers-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Broncos-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Jaguars-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Ravens-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Texans-W": {
+    "result": "W",
+    "pointsFor": 42,
+    "pointsAgainst": 6
+   },
+   "Titans-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Cowboys-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Dolphins-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Chiefs-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Jets-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Bengals-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Packers-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Falcons-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Lions-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 9
+   },
+   "Browns-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Chargers-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Raiders-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Falcons-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Commanders-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Saints-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Buccaneers-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Rams-W": {
+    "result": "W",
+    "pointsFor": 42,
+    "pointsAgainst": 6
+   },
+   "Cardinals-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   }
+  },
+  "15": {
+   "Eagles-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 9
+   },
+   "Giants-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "49ers-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Patriots-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Seahawks-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Bills-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Colts-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Panthers-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Broncos-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Jaguars-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Ravens-W": {
+    "result": "W",
+    "pointsFor": 42,
+    "pointsAgainst": 6
+   },
+   "Texans-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Titans-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Cowboys-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Dolphins-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Chiefs-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Jets-L": {
+    "result": "L",
+    "pointsFor": 6,
+    "pointsAgainst": 20
+   },
+   "Bengals-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Packers-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Falcons-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Lions-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Browns-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Chargers-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Raiders-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Falcons-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Commanders-W": {
+    "result": "W",
+    "pointsFor": 42,
+    "pointsAgainst": 6
+   },
+   "Saints-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Buccaneers-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Rams-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Cardinals-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   }
+  },
+  "16": {
+   "Eagles-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 9
+   },
+   "Giants-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "49ers-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Patriots-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Seahawks-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Bills-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 9
+   },
+   "Colts-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Panthers-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Broncos-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Jaguars-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Ravens-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Texans-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 9
+   },
+   "Titans-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Cowboys-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Dolphins-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Chiefs-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Jets-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Bengals-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Packers-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Falcons-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Lions-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Browns-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Chargers-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Raiders-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Falcons-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Commanders-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Saints-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Buccaneers-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Rams-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Cardinals-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   }
+  },
+  "17": {
+   "Eagles-W": {
+    "result": "W",
+    "pointsFor": 42,
+    "pointsAgainst": 6
+   },
+   "Giants-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "49ers-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 9
+   },
+   "Patriots-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Seahawks-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Bills-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Colts-L": {
+    "result": "L",
+    "pointsFor": 6,
+    "pointsAgainst": 20
+   },
+   "Panthers-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Broncos-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Jaguars-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Ravens-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 9
+   },
+   "Texans-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Titans-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Cowboys-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Dolphins-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Chiefs-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Jets-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Bengals-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Packers-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Falcons-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Lions-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Browns-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Chargers-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Raiders-L": {
+    "result": "L",
+    "pointsFor": 6,
+    "pointsAgainst": 20
+   },
+   "Falcons-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Commanders-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Saints-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Buccaneers-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Rams-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Cardinals-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   }
+  },
+  "18": {
+   "Eagles-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Giants-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "49ers-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Patriots-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 9
+   },
+   "Seahawks-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Bills-W": {
+    "result": "W",
+    "pointsFor": 42,
+    "pointsAgainst": 6
+   },
+   "Colts-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Panthers-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Broncos-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Jaguars-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Ravens-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Texans-W": {
+    "result": "W",
+    "pointsFor": 42,
+    "pointsAgainst": 6
+   },
+   "Titans-L": {
+    "result": "L",
+    "pointsFor": 6,
+    "pointsAgainst": 20
+   },
+   "Cowboys-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Dolphins-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Chiefs-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Jets-L": {
+    "result": "L",
+    "pointsFor": 6,
+    "pointsAgainst": 20
+   },
+   "Bengals-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Packers-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Falcons-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Lions-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Browns-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Chargers-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Raiders-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Falcons-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Commanders-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Saints-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Buccaneers-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Rams-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Cardinals-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   }
+  },
+  "WC": {
+   "Eagles-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Giants-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "49ers-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 9
+   },
+   "Patriots-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Seahawks-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Bills-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Colts-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Panthers-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Broncos-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Jaguars-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Ravens-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Texans-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 9
+   },
+   "Titans-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Cowboys-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Dolphins-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Chiefs-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Jets-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Bengals-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Packers-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Falcons-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Lions-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Browns-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Chargers-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Raiders-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Falcons-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Commanders-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Saints-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Buccaneers-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Rams-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Cardinals-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   }
+  },
+  "DIV": {
+   "Eagles-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Giants-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "49ers-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Patriots-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Seahawks-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Bills-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Colts-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Panthers-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Broncos-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Jaguars-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Ravens-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Texans-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Titans-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Cowboys-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Dolphins-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Chiefs-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Jets-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Bengals-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Packers-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Falcons-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Lions-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Browns-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Chargers-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Raiders-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Falcons-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Commanders-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Saints-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Buccaneers-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Rams-W": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
+   },
+   "Cardinals-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   }
+  },
+  "CC": {
+   "Eagles-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Giants-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "49ers-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Patriots-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Seahawks-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Bills-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Colts-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Panthers-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Broncos-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Jaguars-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Ravens-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Texans-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Titans-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Cowboys-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Dolphins-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Chiefs-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Jets-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Bengals-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Packers-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Falcons-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Lions-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Browns-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Chargers-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Raiders-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Falcons-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Commanders-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Saints-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Buccaneers-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Rams-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Cardinals-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   }
+  },
+  "SB": {
+   "Eagles-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Giants-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "49ers-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Patriots-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Seahawks-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Bills-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Colts-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Panthers-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Broncos-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Jaguars-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Ravens-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Texans-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Titans-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Cowboys-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Dolphins-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Chiefs-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Jets-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Bengals-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Packers-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Falcons-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Lions-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Browns-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Chargers-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Raiders-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Falcons-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Commanders-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Saints-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   },
+   "Buccaneers-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Rams-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Cardinals-L": {
+    "result": "L",
+    "pointsFor": 3,
+    "pointsAgainst": 45
+   }
+  }
+ }
+}

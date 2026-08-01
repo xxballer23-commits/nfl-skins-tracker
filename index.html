@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NFL Skins League Tracker</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div class="title">
+    <h1>NFL Skins League</h1>
+    <p>Manual scoreboard tracker</p>
+  </div>
+  <div class="toolbar">
+    <label class="field">
+      <span>Skin value ($)</span>
+      <input type="number" id="skin-value" min="0" step="1">
+    </label>
+    <button id="export" class="btn">Export JSON</button>
+    <label class="btn" for="import-file">Import JSON</label>
+    <input type="file" id="import-file" accept="application/json" hidden>
+    <button id="reset" class="btn btn-danger">Reset</button>
+  </div>
+</header>
+
+<nav id="nav"></nav>
+<main id="view"></main>
+
+<footer>
+  Data is autosaved in this browser only. Export to JSON for a real backup.
+</footer>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
