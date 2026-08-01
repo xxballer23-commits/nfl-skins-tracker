@@ -105,7 +105,7 @@ function renderEntry(root) {
     row.append(nameCell);
 
     const resultSelect = el('select');
-    for (const [value, label] of [['', '— did not play —'], ['W', 'Won'], ['L', 'Lost'], ['T', 'Tied']]) {
+    for (const [value, label] of [['', 'Did not play'], ['W', 'Won'], ['L', 'Lost'], ['T', 'Tied']]) {
       const opt = el('option', null, label);
       opt.value = value;
       opt.selected = (entry?.result ?? '') === value;
