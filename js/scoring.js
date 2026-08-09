@@ -1,8 +1,11 @@
 // Scoring engine for the NFL Skins League.
 // Pure functions, no DOM access, so this file can be unit tested outside the browser.
 
-export const BONUS_LOW = 9.5;   // "under 9.5 points"
-export const BONUS_HIGH = 39.5; // "over 39.5 points"
+// The spec doc says "under 9.5", but replaying the 2025 season against real game
+// scores shows the league actually played "10 or fewer" (29 pick-weeks hinged on it).
+// User confirmed 10.5 is authoritative.
+export const BONUS_LOW = 10.5;  // held to 10 points or fewer
+export const BONUS_HIGH = 39.5; // scored 40 points or more
 
 export const WEEKS = [
   ...Array.from({ length: 18 }, (_, i) => ({

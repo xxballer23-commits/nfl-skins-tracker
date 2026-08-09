@@ -33,19 +33,23 @@ check('Tie earns nothing for Win pick', skins('W', game('T', 20, 20)), { base: 0
 check('Tie earns nothing for Lose pick', skins('L', game('T', 20, 20)), { base: 0, bonus: 0, total: 0 });
 
 // ---- Win pick bonuses ----
-check('Win + held under 9.5', skins('W', game('W', 20, 9)), { base: 1, bonus: 1, total: 2 });
+check('Win + held under 10.5', skins('W', game('W', 20, 9)), { base: 1, bonus: 1, total: 2 });
 check('Win + scored over 39.5', skins('W', game('W', 40, 20)), { base: 1, bonus: 1, total: 2 });
 check('Win + both bonuses (42-6)', skins('W', game('W', 42, 6)), { base: 1, bonus: 2, total: 3 });
-check('Win, opponent exactly 10, no bonus', skins('W', game('W', 20, 10)), { base: 1, bonus: 0, total: 1 });
+check('Win, opponent exactly 10, bonus', skins('W', game('W', 20, 10)), { base: 1, bonus: 1, total: 2 });
+check('Win, opponent exactly 11, no bonus', skins('W', game('W', 20, 11)), { base: 1, bonus: 0, total: 1 });
+check('Win, scored exactly 40, bonus', skins('W', game('W', 40, 20)), { base: 1, bonus: 1, total: 2 });
 check('Win, scored exactly 39, no bonus', skins('W', game('W', 39, 20)), { base: 1, bonus: 0, total: 1 });
 check('Win, shutout 45-0 gets both', skins('W', game('W', 45, 0)), { base: 1, bonus: 2, total: 3 });
 
 // ---- Lose pick bonuses ----
-check('Loss + scored under 9.5', skins('L', game('L', 6, 20)), { base: 1, bonus: 1, total: 2 });
+check('Loss + scored under 10.5', skins('L', game('L', 6, 20)), { base: 1, bonus: 1, total: 2 });
 check('Loss + opponent over 39.5', skins('L', game('L', 20, 42)), { base: 1, bonus: 1, total: 2 });
 check('Loss + both bonuses (3-45)', skins('L', game('L', 3, 45)), { base: 1, bonus: 2, total: 3 });
-check('Loss, scored exactly 10, no bonus', skins('L', game('L', 10, 30)), { base: 1, bonus: 0, total: 1 });
-check('Loss, opponent exactly 39, no bonus', skins('L', game('L', 10, 39)), { base: 1, bonus: 0, total: 1 });
+check('Loss, scored exactly 10, bonus', skins('L', game('L', 10, 30)), { base: 1, bonus: 1, total: 2 });
+check('Loss, scored exactly 11, no bonus', skins('L', game('L', 11, 30)), { base: 1, bonus: 0, total: 1 });
+check('Loss, opponent exactly 40, bonus', skins('L', game('L', 14, 40)), { base: 1, bonus: 1, total: 2 });
+check('Loss, opponent exactly 39, no bonus', skins('L', game('L', 14, 39)), { base: 1, bonus: 0, total: 1 });
 
 // ---- bonuses never apply without the base skin ----
 check('Win pick that loses 3-45 earns nothing', skins('W', game('L', 3, 45)), { base: 0, bonus: 0, total: 0 });
