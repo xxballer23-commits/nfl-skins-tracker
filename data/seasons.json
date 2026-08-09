@@ -1,0 +1,17 @@
+{
+  "current": "2026",
+  "seasons": [
+    {
+      "id": "2026",
+      "label": "2026 Season",
+      "archived": false,
+      "note": "Roster is carried over from 2025 until the draft is entered."
+    },
+    {
+      "id": "2025",
+      "label": "2025 Season",
+      "archived": true,
+      "note": "Final, recomputed from real game scores. Week 1 was not played."
+    }
+  ]
+}

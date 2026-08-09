@@ -16,4 +16,6 @@ else
 fi
 
 $RUN test/scoring.test.mjs
+$RUN test/draft.test.mjs
 $RUN test/validate.mjs
+$RUN test/validate-real.mjs

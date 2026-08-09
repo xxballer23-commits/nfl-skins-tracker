@@ -1,0 +1,78 @@
+name: Update results
+
+# Pulls finished NFL games from ESPN and commits the refreshed season files, so
+# the published scoreboard updates itself. Only completed games are written, so
+# running this more often than necessary is harmless.
+
+on:
+  schedule:
+    # 11:00 UTC daily = 6am ET / 7am EDT, after Sunday, Monday and Thursday games
+    # have all gone final.
+    - cron: '0 11 * * *'
+  workflow_dispatch:
+    inputs:
+      season:
+        description: 'Season year to pull (defaults to the current one)'
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-results
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Work out the season year
+        id: season
+        run: |
+          if [ -n "${{ inputs.season }}" ]; then
+            echo "year=${{ inputs.season }}" >> "$GITHUB_OUTPUT"
+          else
+            # The playoffs run into January and February but still belong to the
+            # previous season, so anything before March counts as last year.
+            month=$(date -u +%m)
+            year=$(date -u +%Y)
+            if [ "$month" -lt 3 ]; then year=$((year - 1)); fi
+            echo "year=$year" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Fetch results
+        run: |
+          python3 tools/fetch_results.py ${{ steps.season.outputs.year }} \
+            --out data/${{ steps.season.outputs.year }}-games.json
+
+      - name: Build season file
+        run: |
+          # Use this season's drafted roster once it has been exported and
+          # committed; fall back to the checked-in board until then.
+          league=data/${{ steps.season.outputs.year }}-league.json
+          if [ ! -f "$league" ]; then league=js/league.js; fi
+          echo "Using league file $league"
+          python3 tools/build_season.py data/${{ steps.season.outputs.year }}-games.json \
+            --league "$league" \
+            --out data/${{ steps.season.outputs.year }}-season.json \
+            --overrides data/${{ steps.season.outputs.year }}-overrides.json
+
+      - name: Run tests
+        run: |
+          node test/scoring.test.mjs
+          node test/draft.test.mjs
+
+      - name: Commit if anything changed
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/${{ steps.season.outputs.year }}-games.json \
+                  data/${{ steps.season.outputs.year }}-season.json
+          if git diff --cached --quiet; then
+            echo 'No new results.'
+          else
+            git commit -m 'Update ${{ steps.season.outputs.year }} results'
+            git push
+          fi

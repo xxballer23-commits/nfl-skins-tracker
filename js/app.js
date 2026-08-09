@@ -1,10 +1,37 @@
 import { WEEKS, WEEK_BY_ID, scorePick, computeTotals, computeStandings, bonusEnabledForWeek } from './scoring.js';
-import { load, save, defaultState, exportToFile, importFromFile } from './store.js';
+import {
+  fetchSeasons,
+  fetchBaseline,
+  loadOverrides,
+  saveOverrides,
+  clearOverrides,
+  emptyOverrides,
+  merge,
+  isOverridden,
+  countOverrides,
+  exportOverrides,
+  exportLeague,
+  importOverrides,
+  loadDraft,
+  saveDraft,
+  clearDraft,
+} from './store.js';
+import { shuffle, snakeSlots, toLeague, draftProblems, availableSelections, draftFromLeague } from './draft.js';
+import { NFL_TEAMS } from './nfl-teams.js';
 
-let state = load();
+let seasons = [];      // entries from data/seasons.json
+let season = null;     // the selected one
+let baseline = null;   // published results for that season
+let overrides = null;  // local corrections layered on top
+let draft = null;      // a local draft in progress, or null to use the published board
+let state = null;      // baseline + overrides, what every view renders from
+
 let activeView = 'entry';
 let selectedWeek = '1';
-let selectedTeam = state.league.teams[0].id;
+let selectedTeam = null;
+
+/** Archived seasons are settled, so they render read-only. */
+const readOnly = () => season?.archived === true;
 
 const $ = (sel) => document.querySelector(sel);
 const el = (tag, className, text) => {
@@ -18,9 +45,45 @@ const money = (n) =>
   `${n < 0 ? '-' : '+'}$${Math.abs(n).toLocaleString('en-US', { maximumFractionDigits: 2 })}`;
 const signed = (n) => `${n >= 0 ? '+' : ''}${n.toFixed(2)}`;
 
+/** A local draft, once started, replaces the published board everywhere. */
+function rebuild() {
+  state = merge(baseline, overrides);
+  if (draft) state.league = toLeague(draft);
+}
+
 function commit() {
-  save(state);
+  rebuild();
+  saveOverrides(season.id, overrides);
   render();
+}
+
+function commitDraft() {
+  saveDraft(season.id, draft);
+  rebuild();
+  render();
+}
+
+const sameEntry = (a, b) =>
+  a === null || b === null
+    ? a === b
+    : a.result === b.result && a.pointsFor === b.pointsFor && a.pointsAgainst === b.pointsAgainst;
+
+/**
+ * Record a correction. If it turns out to match what was published, drop it
+ * instead of storing a no-op, so the exported file only ever lists real changes.
+ */
+function setOverride(weekId, pickId, entry) {
+  const published = baseline.results[weekId]?.[pickId] ?? null;
+  if (sameEntry(entry, published)) {
+    delete overrides.weeks[weekId]?.[pickId];
+    if (overrides.weeks[weekId] && !Object.keys(overrides.weeks[weekId]).length) {
+      delete overrides.weeks[weekId];
+    }
+  } else {
+    overrides.weeks[weekId] ??= {};
+    overrides.weeks[weekId][pickId] = entry;
+  }
+  commit();
 }
 
 // ---------------------------------------------------------------- entry view
@@ -63,14 +126,20 @@ function renderEntry(root) {
   const bonusBox = el('input');
   bonusBox.type = 'checkbox';
   bonusBox.checked = bonusOn;
+  bonusBox.disabled = readOnly();
   bonusBox.addEventListener('change', (e) => {
-    state.settings.bonusEnabledByWeek[week.id] = e.target.checked;
+    overrides.settings.bonusEnabledByWeek ??= {};
+    overrides.settings.bonusEnabledByWeek[week.id] = e.target.checked;
     commit();
   });
   bonusToggle.append(bonusBox, el('span', null, `Bonus skins active for ${week.label}`));
   controls.append(bonusToggle);
 
   root.append(controls);
+
+  if (readOnly()) {
+    root.append(el('p', 'notice', `${season.label} is archived and cannot be edited. ${season.note ?? ''}`));
+  }
 
   if (week.postseason) {
     root.append(
@@ -102,6 +171,9 @@ function renderEntry(root) {
       el('span', 'pick-name', pick.nflTeam),
       el('span', `badge badge-${pick.direction}`, pick.direction === 'W' ? 'WIN' : 'LOSE')
     );
+    if (isOverridden(overrides, week.id, pick.id)) {
+      nameCell.append(el('span', 'badge badge-edited', 'EDITED'));
+    }
     row.append(nameCell);
 
     const resultSelect = el('select');
@@ -111,6 +183,7 @@ function renderEntry(root) {
       opt.selected = (entry?.result ?? '') === value;
       resultSelect.append(opt);
     }
+    resultSelect.disabled = readOnly();
     resultSelect.addEventListener('change', (e) => setResult(week.id, pick.id, e.target.value));
     row.append(wrapCell(resultSelect));
 
@@ -163,6 +236,7 @@ function scoreInput(weekId, pickId, key, value) {
   input.min = '0';
   input.value = value ?? '';
   input.placeholder = '—';
+  input.disabled = readOnly();
   input.addEventListener('change', (e) => setPoints(weekId, pickId, key, e.target.value));
   return input;
 }
@@ -177,26 +251,21 @@ function mismatchWarning(entry) {
 }
 
 function setResult(weekId, pickId, result) {
-  if (!result) {
-    delete state.results[weekId]?.[pickId];
-  } else {
-    state.results[weekId] ??= {};
-    const existing = state.results[weekId][pickId];
-    state.results[weekId][pickId] = {
-      result,
-      pointsFor: existing?.pointsFor ?? null,
-      pointsAgainst: existing?.pointsAgainst ?? null,
-    };
-  }
-  commit();
+  const existing = state.results[weekId]?.[pickId];
+  setOverride(
+    weekId,
+    pickId,
+    result
+      ? { result, pointsFor: existing?.pointsFor ?? null, pointsAgainst: existing?.pointsAgainst ?? null }
+      : null
+  );
 }
 
 function setPoints(weekId, pickId, key, rawValue) {
   const entry = state.results[weekId]?.[pickId];
   if (!entry) return; // set a result first
   const parsed = rawValue === '' ? null : Number(rawValue);
-  entry[key] = Number.isFinite(parsed) ? parsed : null;
-  commit();
+  setOverride(weekId, pickId, { ...entry, [key]: Number.isFinite(parsed) ? parsed : null });
 }
 
 // ------------------------------------------------------------ standings view
@@ -314,6 +383,167 @@ function renderDraft(root) {
   root.append(table);
 }
 
+// ----------------------------------------------------------- draft setup view
+
+function renderSetup(root) {
+  root.append(
+    el(
+      'p',
+      'notice',
+      'Edit the rosters, randomise the order, then work down the board. Everything here ' +
+        'stays in this browser until you export the league file and commit it.'
+    )
+  );
+
+  root.append(el('h2', 'section-title', 'Teams'));
+  const roster = el('table', 'grid');
+  roster.innerHTML = '<thead><tr><th>Team name</th><th>Members (comma separated)</th></tr></thead>';
+  const rosterBody = el('tbody');
+  for (const team of draft.teams) {
+    const tr = el('tr');
+
+    const nameInput = el('input');
+    nameInput.value = team.name;
+    nameInput.placeholder = 'Team name';
+    nameInput.addEventListener('change', (e) => {
+      team.name = e.target.value;
+      commitDraft();
+    });
+
+    const membersInput = el('input');
+    membersInput.value = team.members.join(', ');
+    membersInput.placeholder = 'e.g. Pat, Sam';
+    membersInput.addEventListener('change', (e) => {
+      team.members = e.target.value.split(',').map((m) => m.trim()).filter(Boolean);
+      commitDraft();
+    });
+
+    tr.append(wrapCell(nameInput), wrapCell(membersInput));
+    rosterBody.append(tr);
+  }
+  roster.append(rosterBody);
+  root.append(roster);
+
+  root.append(el('h2', 'section-title', 'Draft order'));
+  const orderRow = el('div', 'controls');
+  const teamName = Object.fromEntries(draft.teams.map((t) => [t.id, t.name]));
+  const chips = el('div', 'order-chips');
+  draft.order.forEach((teamId, i) => {
+    const chip = el('span', 'chip');
+    chip.append(el('span', 'chip-no', String(i + 1)), el('span', null, teamName[teamId] || '—'));
+    chips.append(chip);
+  });
+  const randomize = el('button', 'btn', 'Randomise draft order');
+  randomize.addEventListener('click', () => {
+    if (Object.keys(draft.selections).length && !confirm('Reordering clears every pick already made. Continue?')) {
+      return;
+    }
+    draft.order = shuffle(draft.order);
+    draft.selections = {};
+    commitDraft();
+  });
+  orderRow.append(randomize);
+  root.append(orderRow, chips);
+
+  root.append(el('h2', 'section-title', 'Board'));
+  const board = el('table', 'grid');
+  board.innerHTML =
+    '<thead><tr><th class="num">Pick</th><th class="num">Rd</th><th>Team</th><th>NFL team</th><th>Direction</th></tr></thead>';
+  const boardBody = el('tbody');
+
+  for (const slot of snakeSlots(draft.order)) {
+    const selection = draft.selections[slot.pickNo] ?? {};
+    const tr = el('tr');
+    if (!selection.nflTeam) tr.className = 'muted';
+
+    // Only teams still on the board for the chosen direction, plus this slot's
+    // own current pick so it does not vanish from its own dropdown.
+    const available = availableSelections(draft, NFL_TEAMS, slot.pickNo);
+
+    const teamSelect = el('select');
+    const blank = el('option', null, '— on the clock —');
+    blank.value = '';
+    teamSelect.append(blank);
+    for (const nflTeam of NFL_TEAMS) {
+      const free = available.some((o) => o.nflTeam === nflTeam);
+      const opt = el('option', null, free ? nflTeam : `${nflTeam} (taken)`);
+      opt.value = nflTeam;
+      opt.disabled = !free;
+      opt.selected = selection.nflTeam === nflTeam;
+      teamSelect.append(opt);
+    }
+    teamSelect.addEventListener('change', (e) => setDraftPick(slot.pickNo, 'nflTeam', e.target.value));
+
+    const dirSelect = el('select');
+    for (const [value, label] of [['W', 'WIN'], ['L', 'LOSE']]) {
+      const taken =
+        selection.nflTeam && !available.some((o) => o.nflTeam === selection.nflTeam && o.direction === value);
+      const opt = el('option', null, taken ? `${label} (taken)` : label);
+      opt.value = value;
+      opt.disabled = taken;
+      opt.selected = (selection.direction ?? 'W') === value;
+      dirSelect.append(opt);
+    }
+    dirSelect.disabled = !selection.nflTeam;
+    dirSelect.addEventListener('change', (e) => setDraftPick(slot.pickNo, 'direction', e.target.value));
+
+    tr.append(
+      el('td', 'num', String(slot.pickNo)),
+      el('td', 'num', String(slot.round)),
+      el('td', null, teamName[slot.teamId] || '—'),
+      wrapCell(teamSelect),
+      wrapCell(dirSelect)
+    );
+    boardBody.append(tr);
+  }
+  board.append(boardBody);
+  root.append(board);
+
+  const problems = draftProblems(draft);
+  const status = el('div', 'draft-status');
+  if (problems.length) {
+    const list = el('ul', 'problems');
+    for (const problem of problems) list.append(el('li', null, problem));
+    status.append(list);
+  } else {
+    status.append(el('p', 'notice ok', 'Draft complete. Export the league file and commit it to publish.'));
+  }
+  root.append(status);
+
+  const actions = el('div', 'controls');
+  const exportBtn = el('button', 'btn', 'Export league file');
+  exportBtn.addEventListener('click', () => exportLeague(season.id, toLeague(draft)));
+  const resetBtn = el('button', 'btn btn-danger', 'Discard draft');
+  resetBtn.addEventListener('click', () => {
+    if (!confirm('Discard this draft and go back to the published board?')) return;
+    clearDraft(season.id);
+    draft = draftFromLeague(baseline.league, season.id);
+    commitDraft();
+  });
+  actions.append(exportBtn, resetBtn);
+  root.append(actions);
+}
+
+/**
+ * A pick is only real once it has both halves, so choosing an NFL team defaults
+ * the direction to whichever of WIN/LOSE is still free.
+ */
+function setDraftPick(pickNo, key, value) {
+  if (key === 'nflTeam' && !value) {
+    delete draft.selections[pickNo];
+    commitDraft();
+    return;
+  }
+  const current = draft.selections[pickNo] ?? {};
+  const next = { ...current, [key]: value };
+  if (key === 'nflTeam') {
+    const free = availableSelections(draft, NFL_TEAMS, pickNo).filter((o) => o.nflTeam === value);
+    if (!free.some((o) => o.direction === next.direction)) next.direction = free[0]?.direction ?? 'W';
+  }
+  draft.selections[pickNo] = next;
+  commitDraft();
+}
+
 // --------------------------------------------------------------------- shell
 
 const VIEWS = {
@@ -321,12 +551,14 @@ const VIEWS = {
   standings: { label: 'Standings', render: renderStandings },
   matrix: { label: 'Skins by Week', render: renderMatrix },
   draft: { label: 'Draft Board', render: renderDraft },
+  setup: { label: 'Draft Setup', render: renderSetup, editableOnly: true },
 };
 
 function render() {
   const nav = $('#nav');
   nav.replaceChildren();
   for (const [id, view] of Object.entries(VIEWS)) {
+    if (view.editableOnly && readOnly()) continue;
     const button = el('button', id === activeView ? 'tab active' : 'tab', view.label);
     button.addEventListener('click', () => {
       activeView = id;
@@ -335,45 +567,101 @@ function render() {
     nav.append(button);
   }
 
+  renderToolbar();
+
   const root = $('#view');
   root.replaceChildren();
   VIEWS[activeView].render(root);
 }
 
-function initToolbar() {
+function renderToolbar() {
   const skinValueInput = $('#skin-value');
   skinValueInput.value = state.settings.skinValue;
-  skinValueInput.addEventListener('change', (e) => {
+  skinValueInput.disabled = readOnly();
+
+  const seasonSelect = $('#season');
+  seasonSelect.replaceChildren();
+  for (const s of seasons) {
+    const opt = el('option', null, s.label);
+    opt.value = s.id;
+    opt.selected = s.id === season.id;
+    seasonSelect.append(opt);
+  }
+
+  const pending = countOverrides(overrides);
+  const status = $('#status');
+  status.replaceChildren();
+  if (baseline.updated) {
+    status.append(el('span', null, `Results updated ${new Date(baseline.updated).toLocaleString()}`));
+  }
+  if (pending) {
+    status.append(
+      el('span', 'pending', `${pending} unpublished correction${pending === 1 ? '' : 's'} — export and commit to publish`)
+    );
+  }
+
+  $('#export').disabled = pending === 0;
+  $('#reset').disabled = pending === 0;
+}
+
+function initToolbar() {
+  $('#season').addEventListener('change', (e) => selectSeason(e.target.value));
+
+  $('#skin-value').addEventListener('change', (e) => {
     const parsed = Number(e.target.value);
-    state.settings.skinValue = Number.isFinite(parsed) && parsed >= 0 ? parsed : 0;
-    e.target.value = state.settings.skinValue;
+    const value = Number.isFinite(parsed) && parsed >= 0 ? parsed : 0;
+    if (value === baseline.settings.skinValue) delete overrides.settings.skinValue;
+    else overrides.settings.skinValue = value;
     commit();
   });
 
-  $('#export').addEventListener('click', () => exportToFile(state));
+  $('#export').addEventListener('click', () => exportOverrides(season.id, overrides));
 
   $('#import-file').addEventListener('change', async (e) => {
     const [file] = e.target.files;
-    if (!file) return;
-    try {
-      state = await importFromFile(file);
-      selectedTeam = state.league.teams[0].id;
-      $('#skin-value').value = state.settings.skinValue;
-      commit();
-    } catch (err) {
-      alert(`Could not read that file: ${err.message}`);
+    if (file) {
+      try {
+        overrides = await importOverrides(file, season.id);
+        commit();
+      } catch (err) {
+        alert(`Could not read that file: ${err.message}`);
+      }
     }
     e.target.value = '';
   });
 
   $('#reset').addEventListener('click', () => {
-    if (!confirm('Erase all entered results and settings? Export first if you want a backup.')) return;
-    state = defaultState();
-    selectedTeam = state.league.teams[0].id;
-    $('#skin-value').value = state.settings.skinValue;
+    if (!confirm('Discard your unpublished corrections and go back to the published results?')) return;
+    clearOverrides(season.id);
+    overrides = emptyOverrides(season.id);
     commit();
   });
 }
 
-initToolbar();
-render();
+// --------------------------------------------------------------- bootstrap
+
+async function selectSeason(seasonId) {
+  season = seasons.find((s) => s.id === seasonId) ?? seasons[0];
+  baseline = await fetchBaseline(season.id);
+  overrides = readOnly() ? emptyOverrides(season.id) : loadOverrides(season.id);
+  draft = readOnly() ? null : loadDraft(season.id) ?? draftFromLeague(baseline.league, season.id);
+  if (readOnly() && VIEWS[activeView].editableOnly) activeView = 'standings';
+  rebuild();
+  selectedTeam = state.league.teams[0]?.id ?? null;
+  render();
+}
+
+async function start() {
+  try {
+    const manifest = await fetchSeasons();
+    seasons = manifest.seasons;
+    initToolbar();
+    await selectSeason(manifest.current);
+  } catch (err) {
+    $('#view').replaceChildren(
+      el('p', 'notice', `Could not load season data: ${err.message}. The site needs to be served over HTTP.`)
+    );
+  }
+}
+
+start();

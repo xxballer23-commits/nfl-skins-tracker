@@ -63,6 +63,19 @@ input:focus, select:focus { outline: 2px solid var(--accent); outline-offset: -1
 }
 .btn:hover { border-color: var(--accent); }
 .btn-danger:hover { border-color: var(--neg); color: var(--neg); }
+.btn:disabled { opacity: 0.4; cursor: default; }
+.btn:disabled:hover { border-color: var(--line); color: var(--text); }
+input:disabled, select:disabled { opacity: 0.55; cursor: default; }
+
+.status {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.status .pending { color: var(--accent); }
 
 nav {
   display: flex;
@@ -70,7 +83,12 @@ nav {
   padding: 12px 24px 0;
   border-bottom: 1px solid var(--line);
   background: var(--panel);
+  /* Scroll the tabs sideways on narrow screens rather than wrapping each label
+     onto three lines. */
+  overflow-x: auto;
+  scrollbar-width: none;
 }
+nav::-webkit-scrollbar { display: none; }
 
 .tab {
   background: none;
@@ -80,6 +98,8 @@ nav {
   padding: 10px 14px;
   font: inherit;
   cursor: pointer;
+  white-space: nowrap;
+  flex: none;
 }
 .tab:hover { color: var(--text); }
 .tab.active { color: var(--text); border-bottom-color: var(--accent); }
@@ -103,6 +123,45 @@ table.grid { min-width: 560px; }
 .notice {
   margin: 0 0 16px;
   padding: 10px 14px;
+  border-left: 3px solid var(--warn);
+  background: rgba(251, 191, 36, 0.08);
+  color: var(--warn);
+  font-size: 13px;
+  border-radius: 0 6px 6px 0;
+}
+
+.notice.ok {
+  border-left-color: var(--pos);
+  background: rgba(52, 211, 153, 0.08);
+  color: var(--pos);
+}
+
+.section-title {
+  margin: 28px 0 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--dim);
+}
+.section-title:first-child { margin-top: 0; }
+
+.order-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+.chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 13px;
+}
+.chip-no { color: var(--dim); font-variant-numeric: tabular-nums; }
+
+.problems {
+  margin: 0 0 16px;
+  padding: 10px 14px 10px 32px;
   border-left: 3px solid var(--warn);
   background: rgba(251, 191, 36, 0.08);
   color: var(--warn);
@@ -168,6 +227,7 @@ table.grid {
 }
 .badge-W { background: rgba(74, 222, 128, 0.15); color: var(--pos); }
 .badge-L { background: rgba(248, 113, 113, 0.15); color: var(--neg); }
+.badge-edited { background: rgba(96, 165, 250, 0.15); color: var(--accent); }
 
 .skins { font-size: 17px; font-weight: 600; color: var(--dim); }
 .skins-on { color: var(--accent); }
