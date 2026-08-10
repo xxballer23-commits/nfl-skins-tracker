@@ -21,10 +21,12 @@
       <span>Skin value ($)</span>
       <input type="number" id="skin-value" min="0" step="1">
     </label>
-    <button id="export" class="btn">Export corrections</button>
-    <label class="btn" for="import-file">Import corrections</label>
-    <input type="file" id="import-file" accept="application/json" hidden>
-    <button id="reset" class="btn btn-danger">Discard corrections</button>
+    <span class="corrections" id="corrections">
+      <button id="export" class="btn">Export corrections</button>
+      <label class="btn" for="import-file">Import corrections</label>
+      <input type="file" id="import-file" accept="application/json" hidden>
+      <button id="reset" class="btn btn-danger">Discard corrections</button>
+    </span>
   </div>
   <div class="status" id="status"></div>
 </header>
@@ -32,10 +34,7 @@
 <nav id="nav"></nav>
 <main id="view"></main>
 
-<footer>
-  Standings come from the published results. Corrections you make here stay in
-  this browser until you export the file and commit it.
-</footer>
+<footer id="footnote"></footer>
 
 <script type="module" src="js/app.js"></script>
 </body>

@@ -30,8 +30,33 @@ let activeView = 'entry';
 let selectedWeek = '1';
 let selectedTeam = null;
 
-/** Archived seasons are settled, so they render read-only. */
-const readOnly = () => season?.archived === true;
+/**
+ * Editing is off by default so the league can share the plain link without
+ * anyone landing on a screen full of live inputs. Visiting ?edit=<key> once
+ * turns it on and the browser remembers it. This is a signpost, not security:
+ * the page is public and anyone can read the key here. Nothing a viewer does
+ * leaves their own browser anyway, since publishing needs a commit.
+ */
+const EDIT_KEY = 'cummiskey';
+const EDITOR_FLAG = 'nfl-skins-tracker-v2:editor';
+
+function resolveEditor() {
+  const asked = new URLSearchParams(location.search).get('edit');
+  if (asked === null) return localStorage.getItem(EDITOR_FLAG) === 'yes';
+  const granted = asked === EDIT_KEY;
+  try {
+    if (granted) localStorage.setItem(EDITOR_FLAG, 'yes');
+    else localStorage.removeItem(EDITOR_FLAG); // ?edit=off signs you out
+  } catch (err) {
+    console.warn('Could not remember editor mode.', err);
+  }
+  return granted;
+}
+
+const isEditor = resolveEditor();
+
+/** Archived seasons are settled, and viewers never edit, so both render read-only. */
+const readOnly = () => season?.archived === true || !isEditor;
 
 const $ = (sel) => document.querySelector(sel);
 const el = (tag, className, text) => {
@@ -137,8 +162,10 @@ function renderEntry(root) {
 
   root.append(controls);
 
-  if (readOnly()) {
+  if (season.archived) {
     root.append(el('p', 'notice', `${season.label} is archived and cannot be edited. ${season.note ?? ''}`));
+  } else if (readOnly()) {
+    root.append(el('p', 'notice', 'Results come straight from ESPN and update on their own. Only the commissioner can enter corrections.'));
   }
 
   if (week.postseason) {
@@ -602,6 +629,11 @@ function renderToolbar() {
 
   $('#export').disabled = pending === 0;
   $('#reset').disabled = pending === 0;
+
+  $('#corrections').hidden = !isEditor;
+  $('#footnote').textContent = isEditor
+    ? 'Standings come from the published results. Corrections you make here stay in this browser until you export the file and commit it.'
+    : 'Standings come from the published results, which update automatically from ESPN.';
 }
 
 function initToolbar() {

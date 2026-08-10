@@ -73,6 +73,14 @@ no-op. Archived seasons render read-only.
 That is why the site needs no logins — editing changes nothing for anyone else
 until you commit the file.
 
+## Commissioner mode
+
+Editing is hidden by default, so the plain link gives the league a clean,
+read-only board. Open `?edit=cummiskey` once and the browser remembers it;
+`?edit=off` signs back out. Because the page is public this is a signpost rather
+than a lock — the key is visible in `js/app.js` and anyone could work around it.
+It does not need to be stronger: the published data only ever changes by commit.
+
 Switch seasons from the header. `data/seasons.json` lists what is available and
 which one loads by default.
 
