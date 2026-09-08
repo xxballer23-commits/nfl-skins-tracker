@@ -215,7 +215,19 @@ table.grid {
 .neg { color: var(--neg); }
 .muted td { opacity: 0.45; }
 
+.pick-label { display: inline-flex; align-items: center; }
 .pick-name { margin-right: 8px; }
+
+/* A ring keeps the darker team colours from vanishing into the panel. */
+.team-swatch {
+  flex: none;
+  width: 4px;
+  height: 15px;
+  margin-right: 9px;
+  border-radius: 2px;
+  background: var(--team-color);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.18);
+}
 
 .badge {
   font-size: 10px;
@@ -247,8 +259,50 @@ table.grid {
 .grid input { min-width: 0; width: 100%; max-width: 110px; }
 .grid select { width: 100%; min-width: 140px; }
 
+/* Everyone above this row is collecting, everyone below is paying. */
+.mendoza-row td {
+  padding: 5px 12px;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--dim);
+  background: var(--panel-alt);
+  border-top: 2px solid var(--accent);
+}
+
+.team-cell { line-height: 1.35; }
+.row-sub { display: none; }
+
+.rosters {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+}
+.roster {
+  padding: 14px 16px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.roster-name { margin: 0 0 10px; font-size: 14px; }
+.roster-picks { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; font-size: 13px; }
+
 footer {
   padding: 16px 24px 40px;
   color: var(--dim);
   font-size: 12px;
+}
+
+/* On a phone the standings drop to rank / team / total / payout so the number
+   everyone cares about stays on screen. The dropped columns move to .row-sub. */
+@media (max-width: 700px) {
+  header, nav, main { padding-left: 14px; padding-right: 14px; }
+  footer { padding-left: 14px; padding-right: 14px; }
+  .grid th, .grid td { padding: 9px 8px; }
+
+  table.grid-fit { min-width: 0; }
+  .col-detail { display: none; }
+  .row-sub { display: block; font-size: 11px; color: var(--dim); }
 }

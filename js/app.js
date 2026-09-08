@@ -18,6 +18,7 @@ import {
 } from './store.js';
 import { shuffle, snakeSlots, toLeague, draftProblems, availableSelections, draftFromLeague } from './draft.js';
 import { NFL_TEAMS } from './nfl-teams.js';
+import { TEAM_COLORS } from './team-colors.js';
 
 let seasons = [];      // entries from data/seasons.json
 let season = null;     // the selected one
@@ -55,6 +56,10 @@ function resolveEditor() {
 
 const isEditor = resolveEditor();
 
+// Viewers get the shared link, and a grid of greyed-out result dropdowns is a poor
+// thing to land on, so send everyone but the commissioner straight to the table.
+if (!isEditor) activeView = 'standings';
+
 /** Archived seasons are settled, and viewers never edit, so both render read-only. */
 const readOnly = () => season?.archived === true || !isEditor;
 
@@ -65,6 +70,31 @@ const el = (tag, className, text) => {
   if (text !== undefined) node.textContent = text;
   return node;
 };
+
+/** A colour chip so a pick reads as its NFL team at a glance, not just as text. */
+function teamSwatch(nflTeam) {
+  const chip = el('span', 'team-swatch');
+  chip.style.setProperty('--team-color', TEAM_COLORS[nflTeam] ?? 'var(--dim)');
+  return chip;
+}
+
+/** Swatch + nickname + WIN/LOSE badge, the way a pick is shown everywhere. */
+function pickLabel(pick) {
+  const wrap = el('span', 'pick-label');
+  wrap.append(
+    teamSwatch(pick.nflTeam),
+    el('span', 'pick-name', pick.nflTeam),
+    el('span', `badge badge-${pick.direction}`, pick.direction === 'W' ? 'WIN' : 'LOSE')
+  );
+  return wrap;
+}
+
+/** False before the season's first game posts, when every total would read 0. */
+function hasResults(s) {
+  return Object.values(s.results).some((week) =>
+    Object.values(week ?? {}).some((entry) => entry?.result)
+  );
+}
 
 const money = (n) =>
   `${n < 0 ? '-' : '+'}$${Math.abs(n).toLocaleString('en-US', { maximumFractionDigits: 2 })}`;
@@ -194,10 +224,7 @@ function renderEntry(root) {
     if (week.postseason && pick.direction === 'L') row.className = 'muted';
 
     const nameCell = el('td');
-    nameCell.append(
-      el('span', 'pick-name', pick.nflTeam),
-      el('span', `badge badge-${pick.direction}`, pick.direction === 'W' ? 'WIN' : 'LOSE')
-    );
+    nameCell.append(pickLabel(pick));
     if (isOverridden(overrides, week.id, pick.id)) {
       nameCell.append(el('span', 'badge badge-edited', 'EDITED'));
     }
@@ -298,6 +325,11 @@ function setPoints(weekId, pickId, key, rawValue) {
 // ------------------------------------------------------------ standings view
 
 function renderStandings(root) {
+  if (!hasResults(state)) {
+    root.append(renderPreseason());
+    return;
+  }
+
   const { byTeam } = computeTotals(state);
   const { mendoza, rows } = computeStandings(Object.values(byTeam), state.settings.skinValue);
 
@@ -305,30 +337,83 @@ function renderStandings(root) {
   summary.append(stat('Mendoza Line', mendoza.toFixed(2)), stat('Skin Value', `$${state.settings.skinValue}`));
   root.append(summary);
 
-  const table = el('table', 'grid');
+  // The detail columns are dropped on phone widths so the payout stays on screen
+  // without a sideways swipe; .row-sub carries their numbers instead.
+  const table = el('table', 'grid grid-fit');
   table.innerHTML = `
     <thead><tr>
-      <th class="num">#</th><th>Team</th><th class="num">Skins</th><th class="num">Bonus Skins</th>
-      <th class="num">Total Skins</th><th class="num">Mendoza +/-</th>
-      <th class="num">$ +/- Team</th><th class="num">$ +/- Teammate</th>
+      <th class="num">#</th><th>Team</th><th class="num col-detail">Skins</th>
+      <th class="num col-detail">Bonus Skins</th><th class="num">Total Skins</th>
+      <th class="num col-detail">Mendoza +/-</th><th class="num col-detail">$ +/- Team</th>
+      <th class="num">$ +/- Teammate</th>
     </tr></thead>`;
   const tbody = el('tbody');
+
+  let dividerPlaced = false;
   rows.forEach((row, i) => {
+    if (!dividerPlaced && row.diff < 0) {
+      dividerPlaced = true;
+      const divider = el('tr', 'mendoza-row');
+      const cell = el('td', null, `Mendoza Line ${mendoza.toFixed(2)}`);
+      cell.colSpan = 8;
+      divider.append(cell);
+      tbody.append(divider);
+    }
+
+    const teamCell = el('td', 'team-cell');
+    teamCell.append(
+      el('span', null, row.name),
+      el('span', 'row-sub', `${row.base} skins + ${row.bonus} bonus`)
+    );
+
     const tr = el('tr');
     tr.append(
       el('td', 'num', String(i + 1)),
-      el('td', null, row.name),
-      el('td', 'num', String(row.base)),
-      el('td', 'num', String(row.bonus)),
+      teamCell,
+      el('td', 'num col-detail', String(row.base)),
+      el('td', 'num col-detail', String(row.bonus)),
       el('td', 'num strong', String(row.total)),
-      el('td', `num ${row.diff >= 0 ? 'pos' : 'neg'}`, signed(row.diff)),
-      el('td', `num ${row.dollarsTeam >= 0 ? 'pos' : 'neg'}`, money(row.dollarsTeam)),
-      el('td', `num ${row.dollarsTeam >= 0 ? 'pos' : 'neg'}`, money(row.dollarsPerTeammate))
+      el('td', `num col-detail ${row.diff >= 0 ? 'pos' : 'neg'}`, signed(row.diff)),
+      el('td', `num col-detail ${row.dollarsTeam >= 0 ? 'pos' : 'neg'}`, money(row.dollarsTeam)),
+      el('td', `num strong ${row.dollarsTeam >= 0 ? 'pos' : 'neg'}`, money(row.dollarsPerTeammate))
     );
     tbody.append(tr);
   });
   table.append(tbody);
   root.append(table);
+}
+
+/**
+ * Before kickoff every total is 0, so show the rosters instead of a table of
+ * zeros — that is the thing the league actually wants to look at right now.
+ */
+function renderPreseason() {
+  const wrap = el('div');
+  wrap.append(
+    el(
+      'p',
+      'notice',
+      `${season.label} hasn't started yet. Standings and payouts fill in here on their own once games are played.`
+    )
+  );
+
+  const rosters = el('div', 'rosters');
+  for (const team of state.league.teams) {
+    const card = el('div', 'roster');
+    card.append(el('h3', 'roster-name', team.name));
+    const list = el('ul', 'roster-picks');
+    for (const pick of state.league.picks
+      .filter((p) => p.teamId === team.id)
+      .sort((a, b) => a.pickNo - b.pickNo)) {
+      const item = el('li');
+      item.append(pickLabel(pick));
+      list.append(item);
+    }
+    card.append(list);
+    rosters.append(card);
+  }
+  wrap.append(rosters);
+  return wrap;
 }
 
 function stat(label, value) {
@@ -342,6 +427,12 @@ function stat(label, value) {
 function renderMatrix(root) {
   const { byTeam } = computeTotals(state);
   const teams = state.league.teams;
+
+  if (!hasResults(state)) {
+    root.append(
+      el('p', 'notice', `${season.label} hasn't started yet, so every week still reads 0.`)
+    );
+  }
 
   const table = el('table', 'grid matrix');
   const head = el('tr');
@@ -379,11 +470,11 @@ function renderDraft(root) {
   const { byPick } = computeTotals(state);
   const teamName = Object.fromEntries(state.league.teams.map((t) => [t.id, t.name]));
 
-  const table = el('table', 'grid');
+  const table = el('table', 'grid grid-fit');
   table.innerHTML = `
     <thead><tr>
-      <th class="num">Pick</th><th class="num">Round</th><th>Team</th><th>Selection</th>
-      <th class="num">Skins</th><th class="num">Bonus</th><th class="num">Total</th>
+      <th class="num">Pick</th><th class="num col-detail">Round</th><th>Team</th><th>Selection</th>
+      <th class="num col-detail">Skins</th><th class="num col-detail">Bonus</th><th class="num">Total</th>
     </tr></thead>`;
   const tbody = el('tbody');
 
@@ -391,17 +482,14 @@ function renderDraft(root) {
     const totals = byPick[pick.id];
     const tr = el('tr');
     const selection = el('td');
-    selection.append(
-      el('span', 'pick-name', pick.nflTeam),
-      el('span', `badge badge-${pick.direction}`, pick.direction === 'W' ? 'WIN' : 'LOSE')
-    );
+    selection.append(pickLabel(pick));
     tr.append(
       el('td', 'num', String(pick.pickNo)),
-      el('td', 'num', String(pick.round)),
+      el('td', 'num col-detail', String(pick.round)),
       el('td', null, teamName[pick.teamId]),
       selection,
-      el('td', 'num', String(totals.base)),
-      el('td', 'num', String(totals.bonus)),
+      el('td', 'num col-detail', String(totals.base)),
+      el('td', 'num col-detail', String(totals.bonus)),
       el('td', 'num strong', String(totals.total))
     );
     tbody.append(tr);
