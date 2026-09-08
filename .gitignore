@@ -1,3 +1,9 @@
 .DS_Store
 __pycache__/
 *.pyc
+
+# Working notes and the source workbook. Kept on disk, deliberately not
+# published: the repo is public and these hold raw league data.
+*.xlsx
+nfl-skins-tracker-spec.md
+cowork-kickoff-prompt.md
