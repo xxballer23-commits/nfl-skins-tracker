@@ -1,11 +1,19 @@
 // Scoring engine for the NFL Skins League.
 // Pure functions, no DOM access, so this file can be unit tested outside the browser.
 
-// The spec doc says "under 9.5", but replaying the 2025 season against real game
-// scores shows the league actually played "10 or fewer" (29 pick-weeks hinged on it).
-// User confirmed 10.5 is authoritative.
-export const BONUS_LOW = 10.5;  // held to 10 points or fewer
-export const BONUS_HIGH = 39.5; // scored 40 points or more
+// The low line moved for 2026: a bonus now needs the opponent held to 9 or
+// fewer, where 2025 played 10 or fewer. Archived seasons have to keep the line
+// they were actually scored under, so this is per-season, not a constant.
+export const BONUS_LOW = 9.5;        // 2026 on: held to 9 points or fewer
+export const BONUS_LOW_LEGACY = 10.5; // 2025 and earlier: held to 10 or fewer
+export const BONUS_HIGH = 39.5;      // unchanged: scored 40 points or more
+
+const FIRST_SEASON_WITH_NEW_LOW = 2026;
+
+/** The low-point bonus line the given season was played under. */
+export function bonusLowForSeason(seasonId) {
+  return Number(seasonId) < FIRST_SEASON_WITH_NEW_LOW ? BONUS_LOW_LEGACY : BONUS_LOW;
+}
 
 export const WEEKS = [
   ...Array.from({ length: 18 }, (_, i) => ({
@@ -29,10 +37,10 @@ const NO_SKINS = Object.freeze({ base: 0, bonus: 0, total: 0 });
  * @param direction 'W' for a Win pick, 'L' for a Lose pick.
  * @param entry     { result: 'W'|'L'|'T', pointsFor, pointsAgainst }, or null/undefined
  *                  for a bye week / no game played.
- * @param opts      { postseason, bonusEnabled }
+ * @param opts      { postseason, bonusEnabled, bonusLow }
  */
 export function scorePick(direction, entry, opts = {}) {
-  const { postseason = false, bonusEnabled = true } = opts;
+  const { postseason = false, bonusEnabled = true, bonusLow = BONUS_LOW } = opts;
 
   if (!entry || !entry.result) return NO_SKINS; // bye week or no game
   // Postseason rule: once a team makes the playoffs, Lose picks are dead for the
@@ -51,10 +59,10 @@ export function scorePick(direction, entry, opts = {}) {
     // The two bonus conditions are independent checks, never an if/else chain:
     // a single pick can earn the base skin plus both bonuses in the same week.
     if (direction === 'W') {
-      if (Number.isFinite(pa) && pa < BONUS_LOW) bonus += 1;
+      if (Number.isFinite(pa) && pa < bonusLow) bonus += 1;
       if (Number.isFinite(pf) && pf > BONUS_HIGH) bonus += 1;
     } else {
-      if (Number.isFinite(pf) && pf < BONUS_LOW) bonus += 1;
+      if (Number.isFinite(pf) && pf < bonusLow) bonus += 1;
       if (Number.isFinite(pa) && pa > BONUS_HIGH) bonus += 1;
     }
   }
@@ -73,6 +81,7 @@ export function bonusEnabledForWeek(settings, weekId) {
  */
 export function computeTotals(state) {
   const { league, results, settings } = state;
+  const bonusLow = bonusLowForSeason(state.season);
 
   const byPick = {};
   for (const pick of league.picks) {
@@ -94,6 +103,7 @@ export function computeTotals(state) {
       const skins = scorePick(pick.direction, weekResults[pick.id], {
         postseason: week.postseason,
         bonusEnabled,
+        bonusLow,
       });
 
       const pickTotals = byPick[pick.id];

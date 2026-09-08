@@ -2,7 +2,7 @@
 // Run with:  ./test/run.sh        (uses jsc, built into macOS)
 // or:        node test/scoring.test.mjs
 
-import { scorePick, computeTotals, computeStandings, WEEKS } from '../js/scoring.js';
+import { scorePick, computeTotals, computeStandings, bonusLowForSeason, WEEKS } from '../js/scoring.js';
 
 const out = typeof console !== 'undefined' && console.log ? console.log.bind(console) : print;
 let passed = 0;
@@ -33,23 +33,55 @@ check('Tie earns nothing for Win pick', skins('W', game('T', 20, 20)), { base: 0
 check('Tie earns nothing for Lose pick', skins('L', game('T', 20, 20)), { base: 0, bonus: 0, total: 0 });
 
 // ---- Win pick bonuses ----
-check('Win + held under 10.5', skins('W', game('W', 20, 9)), { base: 1, bonus: 1, total: 2 });
+check('Win + held under 9.5', skins('W', game('W', 20, 9)), { base: 1, bonus: 1, total: 2 });
 check('Win + scored over 39.5', skins('W', game('W', 40, 20)), { base: 1, bonus: 1, total: 2 });
 check('Win + both bonuses (42-6)', skins('W', game('W', 42, 6)), { base: 1, bonus: 2, total: 3 });
-check('Win, opponent exactly 10, bonus', skins('W', game('W', 20, 10)), { base: 1, bonus: 1, total: 2 });
-check('Win, opponent exactly 11, no bonus', skins('W', game('W', 20, 11)), { base: 1, bonus: 0, total: 1 });
+check('Win, opponent exactly 9, bonus', skins('W', game('W', 20, 9)), { base: 1, bonus: 1, total: 2 });
+check('Win, opponent exactly 10, no bonus', skins('W', game('W', 20, 10)), { base: 1, bonus: 0, total: 1 });
 check('Win, scored exactly 40, bonus', skins('W', game('W', 40, 20)), { base: 1, bonus: 1, total: 2 });
 check('Win, scored exactly 39, no bonus', skins('W', game('W', 39, 20)), { base: 1, bonus: 0, total: 1 });
 check('Win, shutout 45-0 gets both', skins('W', game('W', 45, 0)), { base: 1, bonus: 2, total: 3 });
 
 // ---- Lose pick bonuses ----
-check('Loss + scored under 10.5', skins('L', game('L', 6, 20)), { base: 1, bonus: 1, total: 2 });
+check('Loss + scored under 9.5', skins('L', game('L', 6, 20)), { base: 1, bonus: 1, total: 2 });
 check('Loss + opponent over 39.5', skins('L', game('L', 20, 42)), { base: 1, bonus: 1, total: 2 });
 check('Loss + both bonuses (3-45)', skins('L', game('L', 3, 45)), { base: 1, bonus: 2, total: 3 });
-check('Loss, scored exactly 10, bonus', skins('L', game('L', 10, 30)), { base: 1, bonus: 1, total: 2 });
-check('Loss, scored exactly 11, no bonus', skins('L', game('L', 11, 30)), { base: 1, bonus: 0, total: 1 });
+check('Loss, scored exactly 9, bonus', skins('L', game('L', 9, 30)), { base: 1, bonus: 1, total: 2 });
+check('Loss, scored exactly 10, no bonus', skins('L', game('L', 10, 30)), { base: 1, bonus: 0, total: 1 });
 check('Loss, opponent exactly 40, bonus', skins('L', game('L', 14, 40)), { base: 1, bonus: 1, total: 2 });
 check('Loss, opponent exactly 39, no bonus', skins('L', game('L', 14, 39)), { base: 1, bonus: 0, total: 1 });
+
+// ---- the low line is per season ----
+// 2026 dropped it from 10.5 to 9.5, so a team held to exactly 10 is the only
+// score that changes. 2025 is archived and must keep scoring it as a bonus.
+check('low line, 2025 and earlier', bonusLowForSeason('2025'), 10.5);
+check('low line, 2026 on', bonusLowForSeason('2026'), 9.5);
+check('low line, future seasons', bonusLowForSeason('2027'), 9.5);
+check(
+  'held to 10 earns a bonus under the 2025 line',
+  skins('W', game('W', 20, 10), { bonusLow: bonusLowForSeason('2025') }),
+  { base: 1, bonus: 1, total: 2 }
+);
+check(
+  'held to 10 earns nothing under the 2026 line',
+  skins('W', game('W', 20, 10), { bonusLow: bonusLowForSeason('2026') }),
+  { base: 1, bonus: 0, total: 1 }
+);
+check(
+  'scoring 10 in a loss earns a bonus under the 2025 line',
+  skins('L', game('L', 10, 30), { bonusLow: bonusLowForSeason('2025') }),
+  { base: 1, bonus: 1, total: 2 }
+);
+check(
+  'scoring 10 in a loss earns nothing under the 2026 line',
+  skins('L', game('L', 10, 30), { bonusLow: bonusLowForSeason('2026') }),
+  { base: 1, bonus: 0, total: 1 }
+);
+check(
+  'the high line is untouched by the rule change',
+  skins('W', game('W', 40, 10), { bonusLow: bonusLowForSeason('2026') }),
+  { base: 1, bonus: 1, total: 2 }
+);
 
 // ---- bonuses never apply without the base skin ----
 check('Win pick that loses 3-45 earns nothing', skins('W', game('L', 3, 45)), { base: 0, bonus: 0, total: 0 });
@@ -137,6 +169,16 @@ check('Team A Wild Card total', byTeam.a.byWeek.WC.total, 2);
 check('Team A season', { base: byTeam.a.base, bonus: byTeam.a.bonus, total: byTeam.a.total }, { base: 3, bonus: 5, total: 8 });
 check('Team B season', { base: byTeam.b.base, bonus: byTeam.b.bonus, total: byTeam.b.total }, { base: 2, bonus: 1, total: 3 });
 check('Giants-L season total ignores postseason', byPick['Giants-L'].total, 3);
+
+// computeTotals picks the low line off state.season, so the identical result set
+// scores differently in 2025 and 2026 whenever a team was held to exactly 10.
+const heldToTen = {
+  settings: state.settings,
+  league,
+  results: { 1: { 'Eagles-W': game('W', 20, 10) } },
+};
+check('held to 10, scored as 2025', computeTotals({ ...heldToTen, season: '2025' }).byTeam.a.total, 2);
+check('held to 10, scored as 2026', computeTotals({ ...heldToTen, season: '2026' }).byTeam.a.total, 1);
 
 const { mendoza, rows } = computeStandings(Object.values(byTeam), state.settings.skinValue);
 check('Mendoza Line', mendoza, 5.5);

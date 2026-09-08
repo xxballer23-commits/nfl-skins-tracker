@@ -24,20 +24,22 @@ Base skin, one per pick per week the drafted team plays:
 
 Bonus skins stack on top of the base skin. The two conditions are independent
 checks, so one pick can earn all three skins in a week (a Win pick that wins 42-6
-gets base + held-to-10-or-fewer + scored-40-or-more):
+gets base + held-under-the-low-line + scored-40-or-more):
 
 | Pick type | Condition | Bonus |
 |---|---|---|
-| Win  | Wins AND holds opponent to 10 or fewer | +1 |
+| Win  | Wins AND holds opponent under the low line | +1 |
 | Win  | Wins AND scores 40 or more | +1 |
-| Lose | Loses AND scores 10 or fewer | +1 |
+| Lose | Loses AND scores under the low line | +1 |
 | Lose | Loses AND opponent scores 40 or more | +1 |
 
-**On the low threshold:** the spec doc says "under 9.5". Replaying the 2025
-season against real ESPN scores showed the league actually played "10 or fewer" —
-25 of 114 team-weeks disagreed under 9.5 versus 1 under 10.5, with 29 pick-weeks
-hinging on a team held to exactly 10. The engine uses 10.5. The high threshold
-(39.5) was confirmed correct as written.
+**The low line is per season.** From 2026 it is 9.5, so the bonus needs 9 points
+or fewer. 2025 played 10.5, so 10 points still earned it there. `bonusLowForSeason`
+in `js/scoring.js` picks the line, and `computeTotals` reads it off `state.season`,
+so an archived season always keeps the line it was actually scored under —
+29 pick-weeks in 2025 hinged on a team held to exactly 10.
+
+The high threshold (39.5) is unchanged by the 2026 rule change.
 
 **Postseason rule:** during Wild Card, Divisional, Conf. Champ and Super Bowl,
 every Lose pick scores 0 regardless of the result or the margin. Only Win picks
@@ -102,16 +104,18 @@ python3 -m http.server 8000
 ```
 
 Uses `jsc`, the JavaScript engine bundled with macOS, so nothing needs installing.
-Falls back to `node` if present. Three suites, 1290 assertions:
+Falls back to `node` if present. Four suites, 1335 assertions:
 
-- `test/scoring.test.mjs` — 44 assertions covering the scoring rules directly:
-  each bonus in isolation, both bonuses stacking, the 10.5/39.5 boundaries,
-  byes, ties, the bonus toggle, and the postseason Lose-pick rule.
-- `test/validate.mjs` — 391 assertions replaying last season through the engine
-  and comparing against the Excel tracker.
-- `test/validate-real.mjs` — 855 assertions replaying last season from **real
-  ESPN game scores** and comparing against the same tracker. This is the
-  end-to-end check the spreadsheet alone could not support.
+- `test/scoring.test.mjs` — 54 assertions covering the scoring rules directly:
+  each bonus in isolation, both bonuses stacking, the 9.5/10.5/39.5 boundaries
+  and which season each applies to, byes, ties, the bonus toggle, and the
+  postseason Lose-pick rule.
+- `test/draft.test.mjs` — 34 assertions on the snake order and pick validation.
+- `test/validate.mjs` — 391 assertions replaying the 2025 season through the
+  engine and comparing against the Excel tracker.
+- `test/validate-real.mjs` — 856 assertions replaying 2025 from **real ESPN game
+  scores** and comparing against the same tracker. This is the end-to-end check
+  the spreadsheet alone could not support.
 
 ## Season data
 

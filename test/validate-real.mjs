@@ -7,7 +7,7 @@
 //
 // Run with ./test/run.sh.
 
-import { WEEKS, computeTotals, computeStandings, BONUS_LOW, BONUS_HIGH } from '../js/scoring.js';
+import { WEEKS, computeTotals, computeStandings, bonusLowForSeason, BONUS_HIGH } from '../js/scoring.js';
 import season from './2025-season.fixture.mjs';
 import sheet from './last-season.fixture.mjs';
 
@@ -21,7 +21,10 @@ function check(name, actual, expected) {
   else failures.push(`${name}: expected ${JSON.stringify(expected)}, got ${JSON.stringify(actual)}`);
 }
 
-check('bonus thresholds', [BONUS_LOW, BONUS_HIGH], [10.5, 39.5]);
+// 2025 was played on the old low line and is archived, so it must stay at 10.5
+// even though 2026 onward scores at 9.5.
+check('2025 bonus thresholds', [bonusLowForSeason(season.season), BONUS_HIGH], [10.5, 39.5]);
+check('2026 low line dropped to 9.5', bonusLowForSeason('2026'), 9.5);
 
 const { byTeam, byPick } = computeTotals(season);
 const teamName = Object.fromEntries(season.league.teams.map((t) => [t.id, t.name]));

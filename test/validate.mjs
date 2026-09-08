@@ -31,7 +31,9 @@ const pickNos = league.picks.map((p) => p.pickNo).sort((a, b) => a - b);
 check('draft pick numbers are 1..30 with no duplicates', pickNos, [...Array(30)].map((_, i) => i + 1));
 
 // ------------------------------------------------------- full season, weeks 2+
-const state = { ...fixture.state, league };
+// The fixture predates per-season thresholds, so name the season explicitly:
+// this workbook is 2025 and must score under the old 10.5 low line.
+const state = { ...fixture.state, season: '2025', league };
 const { byTeam, byPick } = computeTotals(state);
 
 for (const team of league.teams) {
