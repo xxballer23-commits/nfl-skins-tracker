@@ -32,11 +32,19 @@
  "league": {
   "teams": [
    {
-    "id": "duriez",
-    "name": "Duriez / Cam",
+    "id": "cummiskey",
+    "name": "Cummiskey / Culp",
     "members": [
-     "Duriez",
-     "Cam"
+     "Cummiskey",
+     "Culp"
+    ]
+   },
+   {
+    "id": "corley",
+    "name": "Corley / Goddard",
+    "members": [
+     "Corley",
+     "Goddard"
     ]
    },
    {
@@ -48,19 +56,19 @@
     ]
    },
    {
-    "id": "joe",
-    "name": "Joe / Aidan",
+    "id": "duriez",
+    "name": "Duriez / Cam",
     "members": [
-     "Joe",
-     "Aidan"
+     "Duriez",
+     "Cam"
     ]
    },
    {
-    "id": "cummiskey",
-    "name": "Cummiskey / Culp",
+    "id": "aidan",
+    "name": "Whit / Aidan",
     "members": [
-     "Cummiskey",
-     "Culp"
+     "Whit",
+     "Aidan"
     ]
    },
    {
@@ -70,47 +78,55 @@
      "Little",
      "Banks"
     ]
-   },
-   {
-    "id": "corley",
-    "name": "Corley / Goddard",
-    "members": [
-     "Corley",
-     "Goddard"
-    ]
    }
   ],
   "picks": [
    {
-    "id": "Eagles-W",
-    "teamId": "duriez",
-    "nflTeam": "Eagles",
-    "direction": "W",
+    "id": "Cardinals-L",
+    "teamId": "cummiskey",
+    "nflTeam": "Cardinals",
+    "direction": "L",
     "pickNo": 1,
     "round": 1
    },
    {
-    "id": "Bills-W",
-    "teamId": "alec",
-    "nflTeam": "Bills",
-    "direction": "W",
+    "id": "Dolphins-L",
+    "teamId": "corley",
+    "nflTeam": "Dolphins",
+    "direction": "L",
     "pickNo": 2,
     "round": 1
    },
    {
-    "id": "Ravens-W",
-    "teamId": "joe",
-    "nflTeam": "Ravens",
+    "id": "Rams-W",
+    "teamId": "alec",
+    "nflTeam": "Rams",
     "direction": "W",
     "pickNo": 3,
     "round": 1
    },
    {
-    "id": "Chiefs-W",
-    "teamId": "cummiskey",
-    "nflTeam": "Chiefs",
+    "id": "Bills-W",
+    "teamId": "duriez",
+    "nflTeam": "Bills",
     "direction": "W",
     "pickNo": 4,
+    "round": 1
+   },
+   {
+    "id": "Browns-L",
+    "teamId": "aidan",
+    "nflTeam": "Browns",
+    "direction": "L",
+    "pickNo": 5,
+    "round": 1
+   },
+   {
+    "id": "Ravens-W",
+    "teamId": "little",
+    "nflTeam": "Ravens",
+    "direction": "W",
+    "pickNo": 6,
     "round": 1
    },
    {
@@ -118,205 +134,189 @@
     "teamId": "little",
     "nflTeam": "Lions",
     "direction": "W",
-    "pickNo": 5,
-    "round": 1
-   },
-   {
-    "id": "Commanders-W",
-    "teamId": "corley",
-    "nflTeam": "Commanders",
-    "direction": "W",
-    "pickNo": 6,
-    "round": 1
-   },
-   {
-    "id": "Saints-L",
-    "teamId": "corley",
-    "nflTeam": "Saints",
-    "direction": "L",
     "pickNo": 7,
     "round": 2
    },
    {
-    "id": "Browns-L",
-    "teamId": "little",
-    "nflTeam": "Browns",
-    "direction": "L",
+    "id": "Eagles-W",
+    "teamId": "aidan",
+    "nflTeam": "Eagles",
+    "direction": "W",
     "pickNo": 8,
     "round": 2
    },
    {
-    "id": "Jets-L",
-    "teamId": "cummiskey",
-    "nflTeam": "Jets",
-    "direction": "L",
+    "id": "Seahawks-W",
+    "teamId": "duriez",
+    "nflTeam": "Seahawks",
+    "direction": "W",
     "pickNo": 9,
     "round": 2
    },
    {
-    "id": "Texans-W",
-    "teamId": "joe",
-    "nflTeam": "Texans",
-    "direction": "W",
+    "id": "Jets-L",
+    "teamId": "alec",
+    "nflTeam": "Jets",
+    "direction": "L",
     "pickNo": 10,
     "round": 2
    },
    {
-    "id": "Colts-L",
-    "teamId": "alec",
-    "nflTeam": "Colts",
-    "direction": "L",
+    "id": "Chiefs-W",
+    "teamId": "corley",
+    "nflTeam": "Chiefs",
+    "direction": "W",
     "pickNo": 11,
     "round": 2
    },
    {
-    "id": "Giants-L",
-    "teamId": "duriez",
-    "nflTeam": "Giants",
+    "id": "Raiders-L",
+    "teamId": "cummiskey",
+    "nflTeam": "Raiders",
     "direction": "L",
     "pickNo": 12,
     "round": 2
-   },
-   {
-    "id": "49ers-W",
-    "teamId": "duriez",
-    "nflTeam": "49ers",
-    "direction": "W",
-    "pickNo": 13,
-    "round": 3
-   },
-   {
-    "id": "Panthers-L",
-    "teamId": "alec",
-    "nflTeam": "Panthers",
-    "direction": "L",
-    "pickNo": 14,
-    "round": 3
-   },
-   {
-    "id": "Titans-L",
-    "teamId": "joe",
-    "nflTeam": "Titans",
-    "direction": "L",
-    "pickNo": 15,
-    "round": 3
    },
    {
     "id": "Bengals-W",
     "teamId": "cummiskey",
     "nflTeam": "Bengals",
     "direction": "W",
-    "pickNo": 16,
+    "pickNo": 13,
+    "round": 3
+   },
+   {
+    "id": "Titans-L",
+    "teamId": "corley",
+    "nflTeam": "Titans",
+    "direction": "L",
+    "pickNo": 14,
+    "round": 3
+   },
+   {
+    "id": "Patriots-W",
+    "teamId": "alec",
+    "nflTeam": "Patriots",
+    "direction": "W",
+    "pickNo": 15,
     "round": 3
    },
    {
     "id": "Chargers-W",
-    "teamId": "little",
+    "teamId": "duriez",
     "nflTeam": "Chargers",
+    "direction": "W",
+    "pickNo": 16,
+    "round": 3
+   },
+   {
+    "id": "Texans-W",
+    "teamId": "aidan",
+    "nflTeam": "Texans",
     "direction": "W",
     "pickNo": 17,
     "round": 3
    },
    {
-    "id": "Buccaneers-W",
-    "teamId": "corley",
-    "nflTeam": "Buccaneers",
+    "id": "49ers-W",
+    "teamId": "little",
+    "nflTeam": "49ers",
     "direction": "W",
     "pickNo": 18,
     "round": 3
    },
    {
-    "id": "Rams-W",
-    "teamId": "corley",
-    "nflTeam": "Rams",
-    "direction": "W",
+    "id": "Commanders-L",
+    "teamId": "little",
+    "nflTeam": "Commanders",
+    "direction": "L",
     "pickNo": 19,
     "round": 4
    },
    {
-    "id": "Raiders-L",
-    "teamId": "little",
-    "nflTeam": "Raiders",
+    "id": "Giants-L",
+    "teamId": "aidan",
+    "nflTeam": "Giants",
     "direction": "L",
     "pickNo": 20,
     "round": 4
    },
    {
-    "id": "Packers-W",
-    "teamId": "cummiskey",
-    "nflTeam": "Packers",
-    "direction": "W",
+    "id": "Falcons-L",
+    "teamId": "duriez",
+    "nflTeam": "Falcons",
+    "direction": "L",
     "pickNo": 21,
     "round": 4
    },
    {
-    "id": "Cowboys-L",
-    "teamId": "joe",
-    "nflTeam": "Cowboys",
-    "direction": "L",
+    "id": "Jaguars-W",
+    "teamId": "alec",
+    "nflTeam": "Jaguars",
+    "direction": "W",
     "pickNo": 22,
     "round": 4
+   },
+   {
+    "id": "Bears-W",
+    "teamId": "corley",
+    "nflTeam": "Bears",
+    "direction": "W",
+    "pickNo": 23,
+    "round": 4
+   },
+   {
+    "id": "Saints-L",
+    "teamId": "cummiskey",
+    "nflTeam": "Saints",
+    "direction": "L",
+    "pickNo": 24,
+    "round": 4
+   },
+   {
+    "id": "Cowboys-W",
+    "teamId": "cummiskey",
+    "nflTeam": "Cowboys",
+    "direction": "W",
+    "pickNo": 25,
+    "round": 5
+   },
+   {
+    "id": "Packers-W",
+    "teamId": "corley",
+    "nflTeam": "Packers",
+    "direction": "W",
+    "pickNo": 26,
+    "round": 5
    },
    {
     "id": "Broncos-W",
     "teamId": "alec",
     "nflTeam": "Broncos",
     "direction": "W",
-    "pickNo": 23,
-    "round": 4
-   },
-   {
-    "id": "Patriots-W",
-    "teamId": "duriez",
-    "nflTeam": "Patriots",
-    "direction": "W",
-    "pickNo": 24,
-    "round": 4
-   },
-   {
-    "id": "Seahawks-L",
-    "teamId": "duriez",
-    "nflTeam": "Seahawks",
-    "direction": "L",
-    "pickNo": 25,
-    "round": 5
-   },
-   {
-    "id": "Jaguars-L",
-    "teamId": "alec",
-    "nflTeam": "Jaguars",
-    "direction": "L",
-    "pickNo": 26,
-    "round": 5
-   },
-   {
-    "id": "Dolphins-L",
-    "teamId": "joe",
-    "nflTeam": "Dolphins",
-    "direction": "L",
     "pickNo": 27,
     "round": 5
    },
    {
-    "id": "Falcons-L",
-    "teamId": "cummiskey",
-    "nflTeam": "Falcons",
-    "direction": "L",
+    "id": "Steelers-W",
+    "teamId": "duriez",
+    "nflTeam": "Steelers",
+    "direction": "W",
     "pickNo": 28,
     "round": 5
    },
    {
-    "id": "Falcons-W",
-    "teamId": "little",
-    "nflTeam": "Falcons",
-    "direction": "W",
+    "id": "Vikings-L",
+    "teamId": "aidan",
+    "nflTeam": "Vikings",
+    "direction": "L",
     "pickNo": 29,
     "round": 5
    },
    {
-    "id": "Cardinals-L",
-    "teamId": "corley",
-    "nflTeam": "Cardinals",
+    "id": "Panthers-L",
+    "teamId": "little",
+    "nflTeam": "Panthers",
     "direction": "L",
     "pickNo": 30,
     "round": 5
