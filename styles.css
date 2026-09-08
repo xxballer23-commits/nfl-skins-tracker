@@ -272,6 +272,9 @@ table.grid {
   border-top: 2px solid var(--accent);
 }
 
+.score { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.score.dim { color: var(--dim); }
+
 .team-cell { line-height: 1.35; }
 .row-sub { display: none; }
 

@@ -148,6 +148,9 @@ function renderEntry(root) {
   const team = state.league.teams.find((t) => t.id === selectedTeam);
   const picks = state.league.picks.filter((p) => p.teamId === selectedTeam);
   const bonusOn = bonusEnabledForWeek(state.settings, week.id);
+  // Viewers read this tab for the game scores, so they get plain text rather
+  // than a wall of disabled inputs; only the commissioner sees the form.
+  const viewing = readOnly();
 
   const controls = el('div', 'controls');
 
@@ -177,25 +180,32 @@ function renderEntry(root) {
 
   controls.append(labeled('Week', weekSelect), labeled('Team', teamSelect));
 
-  const bonusToggle = el('label', 'toggle');
-  const bonusBox = el('input');
-  bonusBox.type = 'checkbox';
-  bonusBox.checked = bonusOn;
-  bonusBox.disabled = readOnly();
-  bonusBox.addEventListener('change', (e) => {
-    overrides.settings.bonusEnabledByWeek ??= {};
-    overrides.settings.bonusEnabledByWeek[week.id] = e.target.checked;
-    commit();
-  });
-  bonusToggle.append(bonusBox, el('span', null, `Bonus skins active for ${week.label}`));
-  controls.append(bonusToggle);
+  // A disabled checkbox is noise for a viewer; they only need telling when
+  // bonuses are off, which is the exception.
+  if (viewing) {
+    if (!bonusOn) controls.append(el('span', 'toggle', `Bonus skins are off for ${week.label}`));
+  } else {
+    const bonusToggle = el('label', 'toggle');
+    const bonusBox = el('input');
+    bonusBox.type = 'checkbox';
+    bonusBox.checked = bonusOn;
+    bonusBox.addEventListener('change', (e) => {
+      overrides.settings.bonusEnabledByWeek ??= {};
+      overrides.settings.bonusEnabledByWeek[week.id] = e.target.checked;
+      commit();
+    });
+    bonusToggle.append(bonusBox, el('span', null, `Bonus skins active for ${week.label}`));
+    controls.append(bonusToggle);
+  }
 
   root.append(controls);
 
+  // Nothing on the viewer's table looks editable any more, so the only notice
+  // still worth showing is that an archived season is settled.
   if (season.archived) {
-    root.append(el('p', 'notice', `${season.label} is archived and cannot be edited. ${season.note ?? ''}`));
-  } else if (readOnly()) {
-    root.append(el('p', 'notice', 'Results come straight from ESPN and update on their own. Only the commissioner can enter corrections.'));
+    root.append(
+      el('p', 'notice', season.note ? `${season.label} — ${season.note}` : `${season.label} is final.`)
+    );
   }
 
   if (week.postseason) {
@@ -204,11 +214,14 @@ function renderEntry(root) {
     );
   }
 
-  const table = el('table', 'grid');
-  table.innerHTML = `
-    <thead><tr>
-      <th>Pick</th><th>Result</th><th>Points For</th><th>Points Against</th><th class="num">Skins</th>
-    </tr></thead>`;
+  // The editor's form needs its min-width on a phone; the plain table does not.
+  const table = el('table', viewing ? 'grid grid-fit' : 'grid');
+  table.innerHTML = viewing
+    ? '<thead><tr><th>Pick</th><th>Result</th><th class="num">Skins</th></tr></thead>'
+    : `<thead><tr>
+        <th>Pick</th><th>Result</th><th>Points For</th><th>Points Against</th><th class="num">Skins</th>
+      </tr></thead>`;
+  const columns = viewing ? 3 : 5;
   const tbody = el('tbody');
 
   let weekTotal = 0;
@@ -230,19 +243,22 @@ function renderEntry(root) {
     }
     row.append(nameCell);
 
-    const resultSelect = el('select');
-    for (const [value, label] of [['', 'Did not play'], ['W', 'Won'], ['L', 'Lost'], ['T', 'Tied']]) {
-      const opt = el('option', null, label);
-      opt.value = value;
-      opt.selected = (entry?.result ?? '') === value;
-      resultSelect.append(opt);
-    }
-    resultSelect.disabled = readOnly();
-    resultSelect.addEventListener('change', (e) => setResult(week.id, pick.id, e.target.value));
-    row.append(wrapCell(resultSelect));
+    if (viewing) {
+      row.append(el('td', entry?.result ? 'score' : 'score dim', resultText(entry)));
+    } else {
+      const resultSelect = el('select');
+      for (const [value, label] of [['', 'Did not play'], ['W', 'Won'], ['L', 'Lost'], ['T', 'Tied']]) {
+        const opt = el('option', null, label);
+        opt.value = value;
+        opt.selected = (entry?.result ?? '') === value;
+        resultSelect.append(opt);
+      }
+      resultSelect.addEventListener('change', (e) => setResult(week.id, pick.id, e.target.value));
+      row.append(wrapCell(resultSelect));
 
-    row.append(wrapCell(scoreInput(week.id, pick.id, 'pointsFor', entry?.pointsFor)));
-    row.append(wrapCell(scoreInput(week.id, pick.id, 'pointsAgainst', entry?.pointsAgainst)));
+      row.append(wrapCell(scoreInput(week.id, pick.id, 'pointsFor', entry?.pointsFor)));
+      row.append(wrapCell(scoreInput(week.id, pick.id, 'pointsAgainst', entry?.pointsAgainst)));
+    }
 
     const skinsCell = el('td', 'num');
     skinsCell.append(el('span', skins.total > 0 ? 'skins skins-on' : 'skins', String(skins.total)));
@@ -255,7 +271,7 @@ function renderEntry(root) {
     if (warning) {
       const warnRow = el('tr', 'warn-row');
       const cell = el('td', null, warning);
-      cell.colSpan = 5;
+      cell.colSpan = columns;
       warnRow.append(cell);
       tbody.append(warnRow);
     }
@@ -265,7 +281,7 @@ function renderEntry(root) {
   const tfoot = el('tfoot');
   const totalRow = el('tr');
   const totalLabel = el('th', null, `${team.name} — ${week.label} total`);
-  totalLabel.colSpan = 4;
+  totalLabel.colSpan = columns - 1;
   totalRow.append(totalLabel, el('th', 'num', String(weekTotal)));
   tfoot.append(totalRow);
   table.append(tfoot);
@@ -290,9 +306,15 @@ function scoreInput(weekId, pickId, key, value) {
   input.min = '0';
   input.value = value ?? '';
   input.placeholder = '—';
-  input.disabled = readOnly();
   input.addEventListener('change', (e) => setPoints(weekId, pickId, key, e.target.value));
   return input;
+}
+
+/** "W 38-20" for a played game, "bye" when the team had no game that week. */
+function resultText(entry) {
+  if (!entry?.result) return 'bye';
+  const { result, pointsFor: pf, pointsAgainst: pa } = entry;
+  return Number.isFinite(pf) && Number.isFinite(pa) ? `${result}  ${pf}-${pa}` : result;
 }
 
 function mismatchWarning(entry) {
@@ -662,7 +684,7 @@ function setDraftPick(pickNo, key, value) {
 // --------------------------------------------------------------------- shell
 
 const VIEWS = {
-  entry: { label: 'Weekly Entry', render: renderEntry },
+  entry: { label: isEditor ? 'Weekly Entry' : 'Results', render: renderEntry },
   standings: { label: 'Standings', render: renderStandings },
   matrix: { label: 'Skins by Week', render: renderMatrix },
   draft: { label: 'Draft Board', render: renderDraft },
