@@ -308,4 +308,7 @@ footer {
   table.grid-fit { min-width: 0; }
   .col-detail { display: none; }
   .row-sub { display: block; font-size: 11px; color: var(--dim); }
+  /* An inline-flex label cannot shrink below its content, which pushed the
+     draft board past the viewport; let the badge drop under the name. */
+  .pick-label { flex-wrap: wrap; row-gap: 2px; }
 }
