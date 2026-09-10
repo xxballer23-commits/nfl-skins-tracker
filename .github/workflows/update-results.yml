@@ -6,9 +6,17 @@ name: Update results
 
 on:
   schedule:
-    # 11:00 UTC daily = 6am ET / 7am EDT, after Sunday, Monday and Thursday games
-    # have all gone final.
-    - cron: '0 11 * * *'
+    # Twice daily, and deliberately not on the hour. GitHub queues scheduled runs
+    # on a shared pool and drops them under load, which is worst at :00 — the
+    # 2026 opener was missed exactly that way. Two off-peak slots mean one skipped
+    # run no longer leaves the board stale for a full day.
+    #
+    # 11:23 UTC = 7:23am EDT, after Sunday, Monday and Thursday games are final.
+    - cron: '23 11 * * *'
+    # 04:23 UTC = 12:23am EDT, far enough past the end of a Sunday or Thursday
+    # night game that it is final. 11:23pm was tried on paper and rejected:
+    # night games regularly run past it.
+    - cron: '23 4 * * *'
   workflow_dispatch:
     inputs:
       season:
