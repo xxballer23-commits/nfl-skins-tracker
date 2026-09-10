@@ -1,7 +1,7 @@
 {
  "version": 2,
  "season": "2026",
- "updated": "2026-09-09T11:10:43+00:00",
+ "updated": "2026-09-10T13:00:35+00:00",
  "settings": {
   "skinValue": 100,
   "bonusEnabledByWeek": {
@@ -324,7 +324,18 @@
   ]
  },
  "results": {
-  "1": {},
+  "1": {
+   "Seahawks-W": {
+    "result": "W",
+    "pointsFor": 13,
+    "pointsAgainst": 10
+   },
+   "Patriots-W": {
+    "result": "L",
+    "pointsFor": 10,
+    "pointsAgainst": 13
+   }
+  },
   "2": {},
   "3": {},
   "4": {},
