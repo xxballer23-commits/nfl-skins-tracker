@@ -1,12 +1,24 @@
 {
 "season": 2026,
-"updated": "2026-09-10T13:00:35+00:00",
+"updated": "2026-09-11T08:58:21+00:00",
 "weeks": {
 "1": {
+"49ers": {
+"opponent": "Rams",
+"pointsAgainst": 7,
+"pointsFor": 27,
+"result": "W"
+},
 "Patriots": {
 "opponent": "Seahawks",
 "pointsAgainst": 13,
 "pointsFor": 10,
+"result": "L"
+},
+"Rams": {
+"opponent": "49ers",
+"pointsAgainst": 27,
+"pointsFor": 7,
 "result": "L"
 },
 "Seahawks": {
