@@ -1,6 +1,6 @@
 {
 "season": 2026,
-"updated": "2026-09-13T14:56:33+00:00",
+"updated": "2026-09-14T09:58:21+00:00",
 "weeks": {
 "1": {
 "49ers": {
@@ -9,11 +9,131 @@
 "pointsFor": 27,
 "result": "W"
 },
+"Bears": {
+"opponent": "Panthers",
+"pointsAgainst": 37,
+"pointsFor": 59,
+"result": "W"
+},
+"Bengals": {
+"opponent": "Buccaneers",
+"pointsAgainst": 27,
+"pointsFor": 33,
+"result": "W"
+},
+"Bills": {
+"opponent": "Texans",
+"pointsAgainst": 31,
+"pointsFor": 36,
+"result": "W"
+},
+"Browns": {
+"opponent": "Jaguars",
+"pointsAgainst": 34,
+"pointsFor": 10,
+"result": "L"
+},
+"Buccaneers": {
+"opponent": "Bengals",
+"pointsAgainst": 33,
+"pointsFor": 27,
+"result": "L"
+},
+"Cardinals": {
+"opponent": "Chargers",
+"pointsAgainst": 14,
+"pointsFor": 26,
+"result": "W"
+},
+"Chargers": {
+"opponent": "Cardinals",
+"pointsAgainst": 26,
+"pointsFor": 14,
+"result": "L"
+},
+"Colts": {
+"opponent": "Ravens",
+"pointsAgainst": 41,
+"pointsFor": 23,
+"result": "L"
+},
+"Commanders": {
+"opponent": "Eagles",
+"pointsAgainst": 24,
+"pointsFor": 22,
+"result": "L"
+},
+"Cowboys": {
+"opponent": "Giants",
+"pointsAgainst": 28,
+"pointsFor": 20,
+"result": "L"
+},
+"Dolphins": {
+"opponent": "Raiders",
+"pointsAgainst": 27,
+"pointsFor": 13,
+"result": "L"
+},
+"Eagles": {
+"opponent": "Commanders",
+"pointsAgainst": 22,
+"pointsFor": 24,
+"result": "W"
+},
+"Falcons": {
+"opponent": "Steelers",
+"pointsAgainst": 20,
+"pointsFor": 13,
+"result": "L"
+},
+"Giants": {
+"opponent": "Cowboys",
+"pointsAgainst": 20,
+"pointsFor": 28,
+"result": "W"
+},
+"Jaguars": {
+"opponent": "Browns",
+"pointsAgainst": 10,
+"pointsFor": 34,
+"result": "W"
+},
+"Jets": {
+"opponent": "Titans",
+"pointsAgainst": 10,
+"pointsFor": 23,
+"result": "W"
+},
+"Lions": {
+"opponent": "Saints",
+"pointsAgainst": 30,
+"pointsFor": 31,
+"result": "W"
+},
+"Packers": {
+"opponent": "Vikings",
+"pointsAgainst": 39,
+"pointsFor": 22,
+"result": "L"
+},
+"Panthers": {
+"opponent": "Bears",
+"pointsAgainst": 59,
+"pointsFor": 37,
+"result": "L"
+},
 "Patriots": {
 "opponent": "Seahawks",
 "pointsAgainst": 13,
 "pointsFor": 10,
 "result": "L"
+},
+"Raiders": {
+"opponent": "Dolphins",
+"pointsAgainst": 13,
+"pointsFor": 27,
+"result": "W"
 },
 "Rams": {
 "opponent": "49ers",
@@ -21,10 +141,46 @@
 "pointsFor": 7,
 "result": "L"
 },
+"Ravens": {
+"opponent": "Colts",
+"pointsAgainst": 23,
+"pointsFor": 41,
+"result": "W"
+},
+"Saints": {
+"opponent": "Lions",
+"pointsAgainst": 31,
+"pointsFor": 30,
+"result": "L"
+},
 "Seahawks": {
 "opponent": "Patriots",
 "pointsAgainst": 10,
 "pointsFor": 13,
+"result": "W"
+},
+"Steelers": {
+"opponent": "Falcons",
+"pointsAgainst": 13,
+"pointsFor": 20,
+"result": "W"
+},
+"Texans": {
+"opponent": "Bills",
+"pointsAgainst": 36,
+"pointsFor": 31,
+"result": "L"
+},
+"Titans": {
+"opponent": "Jets",
+"pointsAgainst": 23,
+"pointsFor": 10,
+"result": "L"
+},
+"Vikings": {
+"opponent": "Packers",
+"pointsAgainst": 22,
+"pointsFor": 39,
 "result": "W"
 }
 }
