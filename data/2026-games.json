@@ -1,6 +1,6 @@
 {
 "season": 2026,
-"updated": "2026-09-14T16:58:38+00:00",
+"updated": "2026-09-15T09:29:27+00:00",
 "weeks": {
 "1": {
 "49ers": {
@@ -27,6 +27,12 @@
 "pointsFor": 36,
 "result": "W"
 },
+"Broncos": {
+"opponent": "Chiefs",
+"pointsAgainst": 31,
+"pointsFor": 10,
+"result": "L"
+},
 "Browns": {
 "opponent": "Jaguars",
 "pointsAgainst": 34,
@@ -50,6 +56,12 @@
 "pointsAgainst": 26,
 "pointsFor": 14,
 "result": "L"
+},
+"Chiefs": {
+"opponent": "Broncos",
+"pointsAgainst": 10,
+"pointsFor": 31,
+"result": "W"
 },
 "Colts": {
 "opponent": "Ravens",

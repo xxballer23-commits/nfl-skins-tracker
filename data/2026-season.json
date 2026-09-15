@@ -1,7 +1,7 @@
 {
  "version": 2,
  "season": "2026",
- "updated": "2026-09-14T16:58:38+00:00",
+ "updated": "2026-09-15T09:29:27+00:00",
  "settings": {
   "skinValue": 100,
   "bonusEnabledByWeek": {
@@ -375,6 +375,11 @@
     "pointsFor": 23,
     "pointsAgainst": 10
    },
+   "Chiefs-W": {
+    "result": "W",
+    "pointsFor": 31,
+    "pointsAgainst": 10
+   },
    "Raiders-L": {
     "result": "W",
     "pointsFor": 27,
@@ -449,6 +454,11 @@
     "result": "L",
     "pointsFor": 22,
     "pointsAgainst": 39
+   },
+   "Broncos-W": {
+    "result": "L",
+    "pointsFor": 10,
+    "pointsAgainst": 31
    },
    "Steelers-W": {
     "result": "W",
