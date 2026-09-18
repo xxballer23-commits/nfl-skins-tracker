@@ -1,6 +1,6 @@
 {
 "season": 2026,
-"updated": "2026-09-17T15:34:08+00:00",
+"updated": "2026-09-18T09:04:05+00:00",
 "weeks": {
 "1": {
 "49ers": {
@@ -194,6 +194,20 @@
 "pointsAgainst": 22,
 "pointsFor": 39,
 "result": "W"
+}
+},
+"2": {
+"Bills": {
+"opponent": "Lions",
+"pointsAgainst": 31,
+"pointsFor": 41,
+"result": "W"
+},
+"Lions": {
+"opponent": "Bills",
+"pointsAgainst": 41,
+"pointsFor": 31,
+"result": "L"
 }
 }
 }

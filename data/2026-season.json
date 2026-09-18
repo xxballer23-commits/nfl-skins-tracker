@@ -1,7 +1,7 @@
 {
  "version": 2,
  "season": "2026",
- "updated": "2026-09-17T15:34:08+00:00",
+ "updated": "2026-09-18T09:04:05+00:00",
  "settings": {
   "skinValue": 100,
   "bonusEnabledByWeek": {
@@ -476,7 +476,18 @@
     "pointsAgainst": 59
    }
   },
-  "2": {},
+  "2": {
+   "Bills-W": {
+    "result": "W",
+    "pointsFor": 41,
+    "pointsAgainst": 31
+   },
+   "Lions-W": {
+    "result": "L",
+    "pointsFor": 31,
+    "pointsAgainst": 41
+   }
+  },
   "3": {},
   "4": {},
   "5": {},
