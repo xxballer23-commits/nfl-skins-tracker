@@ -1,6 +1,6 @@
 {
 "season": 2026,
-"updated": "2026-09-21T17:06:35+00:00",
+"updated": "2026-09-22T09:22:08+00:00",
 "weeks": {
 "1": {
 "49ers": {
@@ -293,6 +293,12 @@
 "pointsFor": 3,
 "result": "L"
 },
+"Giants": {
+"opponent": "Rams",
+"pointsAgainst": 28,
+"pointsFor": 6,
+"result": "L"
+},
 "Jaguars": {
 "opponent": "Broncos",
 "pointsAgainst": 20,
@@ -333,6 +339,12 @@
 "opponent": "Chargers",
 "pointsAgainst": 14,
 "pointsFor": 26,
+"result": "W"
+},
+"Rams": {
+"opponent": "Giants",
+"pointsAgainst": 6,
+"pointsFor": 28,
 "result": "W"
 },
 "Ravens": {

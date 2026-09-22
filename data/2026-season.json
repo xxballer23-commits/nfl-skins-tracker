@@ -1,7 +1,7 @@
 {
  "version": 2,
  "season": "2026",
- "updated": "2026-09-21T17:06:35+00:00",
+ "updated": "2026-09-22T09:22:08+00:00",
  "settings": {
   "skinValue": 100,
   "bonusEnabledByWeek": {
@@ -487,6 +487,11 @@
     "pointsFor": 13,
     "pointsAgainst": 35
    },
+   "Rams-W": {
+    "result": "W",
+    "pointsFor": 28,
+    "pointsAgainst": 6
+   },
    "Bills-W": {
     "result": "W",
     "pointsFor": 41,
@@ -566,6 +571,11 @@
     "result": "L",
     "pointsFor": 20,
     "pointsAgainst": 37
+   },
+   "Giants-L": {
+    "result": "L",
+    "pointsFor": 6,
+    "pointsAgainst": 28
    },
    "Falcons-L": {
     "result": "L",
