@@ -1,6 +1,6 @@
 {
 "season": 2026,
-"updated": "2026-09-24T15:50:46+00:00",
+"updated": "2026-09-25T09:40:43+00:00",
 "weeks": {
 "1": {
 "49ers": {
@@ -388,6 +388,20 @@
 "pointsAgainst": 3,
 "pointsFor": 9,
 "result": "W"
+}
+},
+"3": {
+"Falcons": {
+"opponent": "Packers",
+"pointsAgainst": 14,
+"pointsFor": 35,
+"result": "W"
+},
+"Packers": {
+"opponent": "Falcons",
+"pointsAgainst": 35,
+"pointsFor": 14,
+"result": "L"
 }
 }
 }

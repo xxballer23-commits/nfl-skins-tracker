@@ -1,7 +1,7 @@
 {
  "version": 2,
  "season": "2026",
- "updated": "2026-09-24T15:50:46+00:00",
+ "updated": "2026-09-25T09:40:43+00:00",
  "settings": {
   "skinValue": 100,
   "bonusEnabledByWeek": {
@@ -628,7 +628,18 @@
     "pointsAgainst": 3
    }
   },
-  "3": {},
+  "3": {
+   "Falcons-L": {
+    "result": "W",
+    "pointsFor": 35,
+    "pointsAgainst": 14
+   },
+   "Packers-W": {
+    "result": "L",
+    "pointsFor": 14,
+    "pointsAgainst": 35
+   }
+  },
   "4": {},
   "5": {},
   "6": {},
