@@ -1,6 +1,6 @@
 {
 "season": 2026,
-"updated": "2026-09-28T18:37:44+00:00",
+"updated": "2026-09-29T10:46:23+00:00",
 "weeks": {
 "1": {
 "49ers": {
@@ -397,6 +397,12 @@
 "pointsFor": 36,
 "result": "W"
 },
+"Bears": {
+"opponent": "Eagles",
+"pointsAgainst": 7,
+"pointsFor": 27,
+"result": "W"
+},
 "Bengals": {
 "opponent": "Steelers",
 "pointsAgainst": 30,
@@ -467,6 +473,12 @@
 "opponent": "Chiefs",
 "pointsAgainst": 24,
 "pointsFor": 10,
+"result": "L"
+},
+"Eagles": {
+"opponent": "Bears",
+"pointsAgainst": 27,
+"pointsFor": 7,
 "result": "L"
 },
 "Falcons": {

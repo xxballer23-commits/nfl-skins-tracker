@@ -1,7 +1,7 @@
 {
  "version": 2,
  "season": "2026",
- "updated": "2026-09-28T18:37:44+00:00",
+ "updated": "2026-09-29T10:46:23+00:00",
  "settings": {
   "skinValue": 100,
   "bonusEnabledByWeek": {
@@ -664,6 +664,11 @@
     "pointsFor": 31,
     "pointsAgainst": 24
    },
+   "Eagles-W": {
+    "result": "L",
+    "pointsFor": 7,
+    "pointsAgainst": 27
+   },
    "Seahawks-W": {
     "result": "L",
     "pointsFor": 31,
@@ -733,6 +738,11 @@
     "result": "W",
     "pointsFor": 35,
     "pointsAgainst": 6
+   },
+   "Bears-W": {
+    "result": "W",
+    "pointsFor": 27,
+    "pointsAgainst": 7
    },
    "Saints-L": {
     "result": "L",
