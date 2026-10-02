@@ -1,6 +1,6 @@
 {
 "season": 2026,
-"updated": "2026-10-01T17:24:45+00:00",
+"updated": "2026-10-02T10:35:15+00:00",
 "weeks": {
 "1": {
 "49ers": {
@@ -582,6 +582,20 @@
 "pointsAgainst": 16,
 "pointsFor": 23,
 "result": "W"
+}
+},
+"4": {
+"Browns": {
+"opponent": "Steelers",
+"pointsAgainst": 24,
+"pointsFor": 27,
+"result": "W"
+},
+"Steelers": {
+"opponent": "Browns",
+"pointsAgainst": 27,
+"pointsFor": 24,
+"result": "L"
 }
 }
 }
