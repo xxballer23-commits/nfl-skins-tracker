@@ -1,7 +1,7 @@
 {
  "version": 2,
  "season": "2026",
- "updated": "2026-10-05T11:38:41+00:00",
+ "updated": "2026-10-06T11:21:54+00:00",
  "settings": {
   "skinValue": 100,
   "bonusEnabledByWeek": {
@@ -881,6 +881,11 @@
     "pointsFor": 36,
     "pointsAgainst": 24
    },
+   "Falcons-L": {
+    "result": "W",
+    "pointsFor": 45,
+    "pointsAgainst": 24
+   },
    "Jaguars-W": {
     "result": "W",
     "pointsFor": 22,
@@ -890,6 +895,11 @@
     "result": "W",
     "pointsFor": 23,
     "pointsAgainst": 12
+   },
+   "Saints-L": {
+    "result": "L",
+    "pointsFor": 24,
+    "pointsAgainst": 45
    },
    "Cowboys-W": {
     "result": "W",
