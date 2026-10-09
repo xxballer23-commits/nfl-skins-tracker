@@ -1,7 +1,7 @@
 {
  "version": 2,
  "season": "2026",
- "updated": "2026-10-08T17:54:08+00:00",
+ "updated": "2026-10-09T11:23:50+00:00",
  "settings": {
   "skinValue": 100,
   "bonusEnabledByWeek": {
@@ -932,7 +932,13 @@
     "pointsAgainst": 26
    }
   },
-  "5": {},
+  "5": {
+   "Cowboys-W": {
+    "result": "L",
+    "pointsFor": 16,
+    "pointsAgainst": 24
+   }
+  },
   "6": {},
   "7": {},
   "8": {},
