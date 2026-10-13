@@ -1,6 +1,6 @@
 {
 "season": 2026,
-"updated": "2026-10-12T20:19:41+00:00",
+"updated": "2026-10-13T11:56:06+00:00",
 "weeks": {
 "1": {
 "49ers": {
@@ -797,6 +797,12 @@
 "pointsFor": 31,
 "result": "W"
 },
+"Bills": {
+"opponent": "Rams",
+"pointsAgainst": 34,
+"pointsFor": 37,
+"result": "W"
+},
 "Broncos": {
 "opponent": "Chargers",
 "pointsAgainst": 17,
@@ -903,6 +909,12 @@
 "opponent": "Patriots",
 "pointsAgainst": 45,
 "pointsFor": 17,
+"result": "L"
+},
+"Rams": {
+"opponent": "Bills",
+"pointsAgainst": 37,
+"pointsFor": 34,
 "result": "L"
 },
 "Ravens": {

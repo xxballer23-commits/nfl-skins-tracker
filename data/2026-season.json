@@ -1,7 +1,7 @@
 {
  "version": 2,
  "season": "2026",
- "updated": "2026-10-12T20:19:41+00:00",
+ "updated": "2026-10-13T11:56:06+00:00",
  "settings": {
   "skinValue": 100,
   "bonusEnabledByWeek": {
@@ -942,6 +942,16 @@
     "result": "L",
     "pointsFor": 24,
     "pointsAgainst": 31
+   },
+   "Rams-W": {
+    "result": "L",
+    "pointsFor": 34,
+    "pointsAgainst": 37
+   },
+   "Bills-W": {
+    "result": "W",
+    "pointsFor": 37,
+    "pointsAgainst": 34
    },
    "Browns-L": {
     "result": "L",
