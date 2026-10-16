@@ -1,7 +1,7 @@
 {
  "version": 2,
  "season": "2026",
- "updated": "2026-10-15T15:38:09+00:00",
+ "updated": "2026-10-16T09:06:20+00:00",
  "settings": {
   "skinValue": 100,
   "bonusEnabledByWeek": {
@@ -1074,7 +1074,18 @@
     "pointsAgainst": 13
    }
   },
-  "6": {},
+  "6": {
+   "Seahawks-W": {
+    "result": "L",
+    "pointsFor": 14,
+    "pointsAgainst": 17
+   },
+   "Broncos-W": {
+    "result": "W",
+    "pointsFor": 17,
+    "pointsAgainst": 14
+   }
+  },
   "7": {},
   "8": {},
   "9": {},

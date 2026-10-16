@@ -1,6 +1,6 @@
 {
 "season": 2026,
-"updated": "2026-10-15T15:38:09+00:00",
+"updated": "2026-10-16T09:06:20+00:00",
 "weeks": {
 "1": {
 "49ers": {
@@ -958,6 +958,20 @@
 "pointsAgainst": 13,
 "pointsFor": 23,
 "result": "W"
+}
+},
+"6": {
+"Broncos": {
+"opponent": "Seahawks",
+"pointsAgainst": 14,
+"pointsFor": 17,
+"result": "W"
+},
+"Seahawks": {
+"opponent": "Broncos",
+"pointsAgainst": 17,
+"pointsFor": 14,
+"result": "L"
 }
 }
 }
