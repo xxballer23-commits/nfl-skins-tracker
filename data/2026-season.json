@@ -1,7 +1,7 @@
 {
  "version": 2,
  "season": "2026",
- "updated": "2026-10-19T17:33:53+00:00",
+ "updated": "2026-10-20T09:30:27+00:00",
  "settings": {
   "skinValue": 100,
   "bonusEnabledByWeek": {
@@ -1144,6 +1144,16 @@
     "result": "W",
     "pointsFor": 34,
     "pointsAgainst": 31
+   },
+   "49ers-W": {
+    "result": "W",
+    "pointsFor": 23,
+    "pointsAgainst": 17
+   },
+   "Commanders-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 23
    },
    "Giants-L": {
     "result": "L",

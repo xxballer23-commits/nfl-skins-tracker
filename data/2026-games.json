@@ -1,6 +1,6 @@
 {
 "season": 2026,
-"updated": "2026-10-19T17:33:53+00:00",
+"updated": "2026-10-20T09:30:27+00:00",
 "weeks": {
 "1": {
 "49ers": {
@@ -961,6 +961,12 @@
 }
 },
 "6": {
+"49ers": {
+"opponent": "Commanders",
+"pointsAgainst": 17,
+"pointsFor": 23,
+"result": "W"
+},
 "Bears": {
 "opponent": "Falcons",
 "pointsAgainst": 23,
@@ -1013,6 +1019,12 @@
 "opponent": "Titans",
 "pointsAgainst": 26,
 "pointsFor": 20,
+"result": "L"
+},
+"Commanders": {
+"opponent": "49ers",
+"pointsAgainst": 23,
+"pointsFor": 17,
 "result": "L"
 },
 "Cowboys": {
