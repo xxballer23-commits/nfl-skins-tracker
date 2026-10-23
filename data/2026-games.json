@@ -1,6 +1,6 @@
 {
 "season": 2026,
-"updated": "2026-10-22T15:54:57+00:00",
+"updated": "2026-10-23T09:25:23+00:00",
 "weeks": {
 "1": {
 "49ers": {
@@ -1128,6 +1128,20 @@
 "pointsAgainst": 20,
 "pointsFor": 26,
 "result": "W"
+}
+},
+"7": {
+"Bears": {
+"opponent": "Patriots",
+"pointsAgainst": 24,
+"pointsFor": 30,
+"result": "W"
+},
+"Patriots": {
+"opponent": "Bears",
+"pointsAgainst": 30,
+"pointsFor": 24,
+"result": "L"
 }
 }
 }

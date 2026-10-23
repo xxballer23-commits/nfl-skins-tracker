@@ -1,7 +1,7 @@
 {
  "version": 2,
  "season": "2026",
- "updated": "2026-10-22T15:54:57+00:00",
+ "updated": "2026-10-23T09:25:23+00:00",
  "settings": {
   "skinValue": 100,
   "bonusEnabledByWeek": {
@@ -1206,7 +1206,18 @@
     "pointsAgainst": 14
    }
   },
-  "7": {},
+  "7": {
+   "Patriots-W": {
+    "result": "L",
+    "pointsFor": 24,
+    "pointsAgainst": 30
+   },
+   "Bears-W": {
+    "result": "W",
+    "pointsFor": 30,
+    "pointsAgainst": 24
+   }
+  },
   "8": {},
   "9": {},
   "10": {},
