@@ -1,7 +1,7 @@
 {
  "version": 2,
  "season": "2026",
- "updated": "2026-10-26T17:26:25+00:00",
+ "updated": "2026-10-27T09:53:56+00:00",
  "settings": {
   "skinValue": 100,
   "bonusEnabledByWeek": {
@@ -1237,6 +1237,11 @@
     "pointsFor": 20,
     "pointsAgainst": 17
    },
+   "Eagles-W": {
+    "result": "L",
+    "pointsFor": 21,
+    "pointsAgainst": 38
+   },
    "Seahawks-W": {
     "result": "W",
     "pointsFor": 20,
@@ -1301,6 +1306,11 @@
     "result": "L",
     "pointsFor": 10,
     "pointsAgainst": 16
+   },
+   "Cowboys-W": {
+    "result": "W",
+    "pointsFor": 38,
+    "pointsAgainst": 21
    },
    "Packers-W": {
     "result": "L",

@@ -1,6 +1,6 @@
 {
 "season": 2026,
-"updated": "2026-10-26T17:26:25+00:00",
+"updated": "2026-10-27T09:53:56+00:00",
 "weeks": {
 "1": {
 "49ers": {
@@ -1185,11 +1185,23 @@
 "pointsFor": 10,
 "result": "L"
 },
+"Cowboys": {
+"opponent": "Eagles",
+"pointsAgainst": 21,
+"pointsFor": 38,
+"result": "W"
+},
 "Dolphins": {
 "opponent": "Jets",
 "pointsAgainst": 25,
 "pointsFor": 28,
 "result": "W"
+},
+"Eagles": {
+"opponent": "Cowboys",
+"pointsAgainst": 38,
+"pointsFor": 21,
+"result": "L"
 },
 "Falcons": {
 "opponent": "49ers",
