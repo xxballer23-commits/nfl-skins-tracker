@@ -1,7 +1,7 @@
 {
  "version": 2,
  "season": "2026",
- "updated": "2026-10-29T17:27:58+00:00",
+ "updated": "2026-10-30T10:55:41+00:00",
  "settings": {
   "skinValue": 100,
   "bonusEnabledByWeek": {
@@ -1338,7 +1338,18 @@
     "pointsAgainst": 43
    }
   },
-  "8": {},
+  "8": {
+   "Packers-W": {
+    "result": "W",
+    "pointsFor": 27,
+    "pointsAgainst": 19
+   },
+   "Panthers-L": {
+    "result": "L",
+    "pointsFor": 19,
+    "pointsAgainst": 27
+   }
+  },
   "9": {},
   "10": {},
   "11": {},
