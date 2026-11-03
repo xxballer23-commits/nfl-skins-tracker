@@ -1,6 +1,6 @@
 {
 "season": 2026,
-"updated": "2026-11-02T20:48:47+00:00",
+"updated": "2026-11-03T12:04:19+00:00",
 "weeks": {
 "1": {
 "49ers": {
@@ -1301,6 +1301,12 @@
 }
 },
 "8": {
+"Bears": {
+"opponent": "Seahawks",
+"pointsAgainst": 17,
+"pointsFor": 34,
+"result": "W"
+},
 "Bengals": {
 "opponent": "Titans",
 "pointsAgainst": 36,
@@ -1437,6 +1443,12 @@
 "opponent": "Bills",
 "pointsAgainst": 36,
 "pointsFor": 10,
+"result": "L"
+},
+"Seahawks": {
+"opponent": "Bears",
+"pointsAgainst": 34,
+"pointsFor": 17,
 "result": "L"
 },
 "Steelers": {

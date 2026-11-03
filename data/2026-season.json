@@ -1,7 +1,7 @@
 {
  "version": 2,
  "season": "2026",
- "updated": "2026-11-02T20:48:47+00:00",
+ "updated": "2026-11-03T12:04:19+00:00",
  "settings": {
   "skinValue": 100,
   "bonusEnabledByWeek": {
@@ -1379,6 +1379,11 @@
     "pointsFor": 10,
     "pointsAgainst": 27
    },
+   "Seahawks-W": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 34
+   },
    "Jets-L": {
     "result": "L",
     "pointsFor": 33,
@@ -1428,6 +1433,11 @@
     "result": "W",
     "pointsFor": 42,
     "pointsAgainst": 7
+   },
+   "Bears-W": {
+    "result": "W",
+    "pointsFor": 34,
+    "pointsAgainst": 17
    },
    "Cowboys-W": {
     "result": "L",
