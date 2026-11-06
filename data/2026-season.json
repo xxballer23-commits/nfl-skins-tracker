@@ -1,7 +1,7 @@
 {
  "version": 2,
  "season": "2026",
- "updated": "2026-11-05T18:49:20+00:00",
+ "updated": "2026-11-06T12:15:02+00:00",
  "settings": {
   "skinValue": 100,
   "bonusEnabledByWeek": {
@@ -1470,7 +1470,18 @@
     "pointsAgainst": 27
    }
   },
-  "9": {},
+  "9": {
+   "Ravens-W": {
+    "result": "L",
+    "pointsFor": 10,
+    "pointsAgainst": 33
+   },
+   "Jaguars-W": {
+    "result": "W",
+    "pointsFor": 33,
+    "pointsAgainst": 10
+   }
+  },
   "10": {},
   "11": {},
   "12": {},

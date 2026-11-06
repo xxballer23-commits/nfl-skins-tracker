@@ -1,6 +1,6 @@
 {
 "season": 2026,
-"updated": "2026-11-05T18:49:20+00:00",
+"updated": "2026-11-06T12:15:02+00:00",
 "weeks": {
 "1": {
 "49ers": {
@@ -1467,6 +1467,20 @@
 "opponent": "Lions",
 "pointsAgainst": 19,
 "pointsFor": 15,
+"result": "L"
+}
+},
+"9": {
+"Jaguars": {
+"opponent": "Ravens",
+"pointsAgainst": 10,
+"pointsFor": 33,
+"result": "W"
+},
+"Ravens": {
+"opponent": "Jaguars",
+"pointsAgainst": 33,
+"pointsFor": 10,
 "result": "L"
 }
 }
