@@ -1,7 +1,7 @@
 {
  "version": 2,
  "season": "2026",
- "updated": "2026-11-09T21:28:53+00:00",
+ "updated": "2026-11-10T12:46:36+00:00",
  "settings": {
   "skinValue": 100,
   "bonusEnabledByWeek": {
@@ -1486,6 +1486,11 @@
     "pointsFor": 20,
     "pointsAgainst": 13
    },
+   "Bills-W": {
+    "result": "W",
+    "pointsFor": 23,
+    "pointsAgainst": 6
+   },
    "Browns-L": {
     "result": "L",
     "pointsFor": 22,
@@ -1595,6 +1600,11 @@
     "result": "W",
     "pointsFor": 26,
     "pointsAgainst": 21
+   },
+   "Vikings-L": {
+    "result": "L",
+    "pointsFor": 6,
+    "pointsAgainst": 23
    },
    "Panthers-L": {
     "result": "L",
