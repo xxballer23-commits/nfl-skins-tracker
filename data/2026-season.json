@@ -1,7 +1,7 @@
 {
  "version": 2,
  "season": "2026",
- "updated": "2026-11-12T18:59:04+00:00",
+ "updated": "2026-11-13T12:22:25+00:00",
  "settings": {
   "skinValue": 100,
   "bonusEnabledByWeek": {
@@ -1612,7 +1612,18 @@
     "pointsAgainst": 26
    }
   },
-  "10": {},
+  "10": {
+   "Commanders-L": {
+    "result": "W",
+    "pointsFor": 24,
+    "pointsAgainst": 21
+   },
+   "Giants-L": {
+    "result": "L",
+    "pointsFor": 21,
+    "pointsAgainst": 24
+   }
+  },
   "11": {},
   "12": {},
   "13": {},

@@ -1,6 +1,6 @@
 {
 "season": 2026,
-"updated": "2026-11-12T18:59:04+00:00",
+"updated": "2026-11-13T12:22:25+00:00",
 "weeks": {
 "1": {
 "49ers": {
@@ -194,6 +194,20 @@
 "pointsAgainst": 22,
 "pointsFor": 39,
 "result": "W"
+}
+},
+"10": {
+"Commanders": {
+"opponent": "Giants",
+"pointsAgainst": 21,
+"pointsFor": 24,
+"result": "W"
+},
+"Giants": {
+"opponent": "Commanders",
+"pointsAgainst": 24,
+"pointsFor": 21,
+"result": "L"
 }
 },
 "2": {
