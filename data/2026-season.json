@@ -1,7 +1,7 @@
 {
  "version": 2,
  "season": "2026",
- "updated": "2026-11-15T12:03:16+00:00",
+ "updated": "2026-11-15T17:49:26+00:00",
  "settings": {
   "skinValue": 100,
   "bonusEnabledByWeek": {
@@ -1613,6 +1613,16 @@
    }
   },
   "10": {
+   "Lions-W": {
+    "result": "W",
+    "pointsFor": 35,
+    "pointsAgainst": 10
+   },
+   "Patriots-W": {
+    "result": "L",
+    "pointsFor": 10,
+    "pointsAgainst": 35
+   },
    "Commanders-L": {
     "result": "W",
     "pointsFor": 24,
