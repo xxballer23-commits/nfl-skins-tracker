@@ -1,7 +1,7 @@
 {
  "version": 2,
  "season": "2026",
- "updated": "2026-11-15T17:49:26+00:00",
+ "updated": "2026-11-16T12:55:45+00:00",
  "settings": {
   "skinValue": 100,
   "bonusEnabledByWeek": {
@@ -1613,15 +1613,80 @@
    }
   },
   "10": {
+   "Cardinals-L": {
+    "result": "L",
+    "pointsFor": 6,
+    "pointsAgainst": 34
+   },
+   "Dolphins-L": {
+    "result": "L",
+    "pointsFor": 22,
+    "pointsAgainst": 24
+   },
+   "Rams-W": {
+    "result": "W",
+    "pointsFor": 34,
+    "pointsAgainst": 6
+   },
+   "Bills-W": {
+    "result": "W",
+    "pointsFor": 31,
+    "pointsAgainst": 12
+   },
+   "Browns-L": {
+    "result": "W",
+    "pointsFor": 27,
+    "pointsAgainst": 24
+   },
    "Lions-W": {
     "result": "W",
     "pointsFor": 35,
     "pointsAgainst": 10
    },
+   "Seahawks-W": {
+    "result": "W",
+    "pointsFor": 21,
+    "pointsAgainst": 13
+   },
+   "Jets-L": {
+    "result": "L",
+    "pointsFor": 12,
+    "pointsAgainst": 31
+   },
+   "Chiefs-W": {
+    "result": "W",
+    "pointsFor": 35,
+    "pointsAgainst": 13
+   },
+   "Raiders-L": {
+    "result": "L",
+    "pointsFor": 13,
+    "pointsAgainst": 21
+   },
+   "Bengals-W": {
+    "result": "W",
+    "pointsFor": 38,
+    "pointsAgainst": 18
+   },
+   "Titans-L": {
+    "result": "L",
+    "pointsFor": 23,
+    "pointsAgainst": 40
+   },
    "Patriots-W": {
     "result": "L",
     "pointsFor": 10,
     "pointsAgainst": 35
+   },
+   "Texans-W": {
+    "result": "L",
+    "pointsFor": 24,
+    "pointsAgainst": 27
+   },
+   "49ers-W": {
+    "result": "W",
+    "pointsFor": 46,
+    "pointsAgainst": 40
    },
    "Commanders-L": {
     "result": "W",
@@ -1632,6 +1697,46 @@
     "result": "L",
     "pointsFor": 21,
     "pointsAgainst": 24
+   },
+   "Falcons-L": {
+    "result": "L",
+    "pointsFor": 13,
+    "pointsAgainst": 35
+   },
+   "Jaguars-W": {
+    "result": "W",
+    "pointsFor": 40,
+    "pointsAgainst": 23
+   },
+   "Saints-L": {
+    "result": "L",
+    "pointsFor": 17,
+    "pointsAgainst": 20
+   },
+   "Cowboys-W": {
+    "result": "L",
+    "pointsFor": 40,
+    "pointsAgainst": 46
+   },
+   "Packers-W": {
+    "result": "L",
+    "pointsFor": 10,
+    "pointsAgainst": 30
+   },
+   "Steelers-W": {
+    "result": "L",
+    "pointsFor": 18,
+    "pointsAgainst": 38
+   },
+   "Vikings-L": {
+    "result": "W",
+    "pointsFor": 30,
+    "pointsAgainst": 10
+   },
+   "Panthers-L": {
+    "result": "W",
+    "pointsFor": 20,
+    "pointsAgainst": 17
    }
   },
   "11": {},
