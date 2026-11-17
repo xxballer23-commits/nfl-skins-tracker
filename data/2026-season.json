@@ -1,7 +1,7 @@
 {
  "version": 2,
  "season": "2026",
- "updated": "2026-11-16T21:05:40+00:00",
+ "updated": "2026-11-17T13:38:01+00:00",
  "settings": {
   "skinValue": 100,
   "bonusEnabledByWeek": {
@@ -1638,6 +1638,11 @@
     "pointsFor": 27,
     "pointsAgainst": 24
    },
+   "Ravens-W": {
+    "result": "L",
+    "pointsFor": 20,
+    "pointsAgainst": 23
+   },
    "Lions-W": {
     "result": "W",
     "pointsFor": 35,
@@ -1677,6 +1682,11 @@
     "result": "L",
     "pointsFor": 10,
     "pointsAgainst": 35
+   },
+   "Chargers-W": {
+    "result": "W",
+    "pointsFor": 23,
+    "pointsAgainst": 20
    },
    "Texans-W": {
     "result": "L",

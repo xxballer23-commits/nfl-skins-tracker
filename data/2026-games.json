@@ -1,6 +1,6 @@
 {
 "season": 2026,
-"updated": "2026-11-16T21:05:40+00:00",
+"updated": "2026-11-17T13:38:01+00:00",
 "weeks": {
 "1": {
 "49ers": {
@@ -227,6 +227,12 @@
 "pointsFor": 6,
 "result": "L"
 },
+"Chargers": {
+"opponent": "Ravens",
+"pointsAgainst": 20,
+"pointsFor": 23,
+"result": "W"
+},
 "Chiefs": {
 "opponent": "Falcons",
 "pointsAgainst": 13,
@@ -316,6 +322,12 @@
 "pointsAgainst": 6,
 "pointsFor": 34,
 "result": "W"
+},
+"Ravens": {
+"opponent": "Chargers",
+"pointsAgainst": 23,
+"pointsFor": 20,
+"result": "L"
 },
 "Saints": {
 "opponent": "Panthers",
