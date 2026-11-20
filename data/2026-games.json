@@ -1,6 +1,6 @@
 {
 "season": 2026,
-"updated": "2026-11-19T19:30:56+00:00",
+"updated": "2026-11-20T13:11:59+00:00",
 "weeks": {
 "1": {
 "49ers": {
@@ -363,6 +363,20 @@
 "opponent": "Packers",
 "pointsAgainst": 10,
 "pointsFor": 30,
+"result": "W"
+}
+},
+"11": {
+"Colts": {
+"opponent": "Texans",
+"pointsAgainst": 26,
+"pointsFor": 3,
+"result": "L"
+},
+"Texans": {
+"opponent": "Colts",
+"pointsAgainst": 3,
+"pointsFor": 26,
 "result": "W"
 }
 },
