@@ -1,6 +1,6 @@
 {
 "season": 2026,
-"updated": "2026-11-22T18:34:04+00:00",
+"updated": "2026-11-23T14:56:50+00:00",
 "weeks": {
 "1": {
 "49ers": {
@@ -367,10 +367,130 @@
 }
 },
 "11": {
+"49ers": {
+"opponent": "Vikings",
+"pointsAgainst": 10,
+"pointsFor": 35,
+"result": "W"
+},
+"Bears": {
+"opponent": "Saints",
+"pointsAgainst": 13,
+"pointsFor": 21,
+"result": "W"
+},
+"Bills": {
+"opponent": "Dolphins",
+"pointsAgainst": 9,
+"pointsFor": 26,
+"result": "W"
+},
+"Broncos": {
+"opponent": "Raiders",
+"pointsAgainst": 24,
+"pointsFor": 38,
+"result": "W"
+},
+"Buccaneers": {
+"opponent": "Lions",
+"pointsAgainst": 31,
+"pointsFor": 21,
+"result": "L"
+},
+"Cardinals": {
+"opponent": "Chiefs",
+"pointsAgainst": 34,
+"pointsFor": 7,
+"result": "L"
+},
+"Chargers": {
+"opponent": "Jets",
+"pointsAgainst": 27,
+"pointsFor": 24,
+"result": "L"
+},
+"Chiefs": {
+"opponent": "Cardinals",
+"pointsAgainst": 7,
+"pointsFor": 34,
+"result": "W"
+},
 "Colts": {
 "opponent": "Texans",
 "pointsAgainst": 26,
 "pointsFor": 3,
+"result": "L"
+},
+"Cowboys": {
+"opponent": "Titans",
+"pointsAgainst": 30,
+"pointsFor": 51,
+"result": "W"
+},
+"Dolphins": {
+"opponent": "Bills",
+"pointsAgainst": 26,
+"pointsFor": 9,
+"result": "L"
+},
+"Eagles": {
+"opponent": "Steelers",
+"pointsAgainst": 16,
+"pointsFor": 19,
+"result": "W"
+},
+"Giants": {
+"opponent": "Jaguars",
+"pointsAgainst": 18,
+"pointsFor": 23,
+"result": "W"
+},
+"Jaguars": {
+"opponent": "Giants",
+"pointsAgainst": 23,
+"pointsFor": 18,
+"result": "L"
+},
+"Jets": {
+"opponent": "Chargers",
+"pointsAgainst": 24,
+"pointsFor": 27,
+"result": "W"
+},
+"Lions": {
+"opponent": "Buccaneers",
+"pointsAgainst": 21,
+"pointsFor": 31,
+"result": "W"
+},
+"Panthers": {
+"opponent": "Ravens",
+"pointsAgainst": 33,
+"pointsFor": 35,
+"result": "W"
+},
+"Raiders": {
+"opponent": "Broncos",
+"pointsAgainst": 38,
+"pointsFor": 24,
+"result": "L"
+},
+"Ravens": {
+"opponent": "Panthers",
+"pointsAgainst": 35,
+"pointsFor": 33,
+"result": "L"
+},
+"Saints": {
+"opponent": "Bears",
+"pointsAgainst": 21,
+"pointsFor": 13,
+"result": "L"
+},
+"Steelers": {
+"opponent": "Eagles",
+"pointsAgainst": 19,
+"pointsFor": 16,
 "result": "L"
 },
 "Texans": {
@@ -378,6 +498,18 @@
 "pointsAgainst": 3,
 "pointsFor": 26,
 "result": "W"
+},
+"Titans": {
+"opponent": "Cowboys",
+"pointsAgainst": 51,
+"pointsFor": 30,
+"result": "L"
+},
+"Vikings": {
+"opponent": "49ers",
+"pointsAgainst": 35,
+"pointsFor": 10,
+"result": "L"
 }
 },
 "2": {
