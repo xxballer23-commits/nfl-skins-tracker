@@ -1,6 +1,6 @@
 {
 "season": 2026,
-"updated": "2026-11-23T22:43:33+00:00",
+"updated": "2026-11-24T14:59:48+00:00",
 "weeks": {
 "1": {
 "49ers": {
@@ -379,6 +379,12 @@
 "pointsFor": 21,
 "result": "W"
 },
+"Bengals": {
+"opponent": "Commanders",
+"pointsAgainst": 22,
+"pointsFor": 20,
+"result": "L"
+},
 "Bills": {
 "opponent": "Dolphins",
 "pointsAgainst": 9,
@@ -420,6 +426,12 @@
 "pointsAgainst": 26,
 "pointsFor": 3,
 "result": "L"
+},
+"Commanders": {
+"opponent": "Bengals",
+"pointsAgainst": 20,
+"pointsFor": 22,
+"result": "W"
 },
 "Cowboys": {
 "opponent": "Titans",

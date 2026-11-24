@@ -1,7 +1,7 @@
 {
  "version": 2,
  "season": "2026",
- "updated": "2026-11-23T22:43:33+00:00",
+ "updated": "2026-11-24T14:59:48+00:00",
  "settings": {
   "skinValue": 100,
   "bonusEnabledByWeek": {
@@ -1795,6 +1795,11 @@
     "pointsFor": 24,
     "pointsAgainst": 38
    },
+   "Bengals-W": {
+    "result": "L",
+    "pointsFor": 20,
+    "pointsAgainst": 22
+   },
    "Titans-L": {
     "result": "L",
     "pointsFor": 30,
@@ -1814,6 +1819,11 @@
     "result": "W",
     "pointsFor": 35,
     "pointsAgainst": 10
+   },
+   "Commanders-L": {
+    "result": "W",
+    "pointsFor": 22,
+    "pointsAgainst": 20
    },
    "Giants-L": {
     "result": "W",
