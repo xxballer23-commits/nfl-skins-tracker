@@ -1,6 +1,6 @@
 {
 "season": 2026,
-"updated": "2026-11-25T20:30:24+00:00",
+"updated": "2026-11-26T14:01:32+00:00",
 "weeks": {
 "1": {
 "49ers": {
@@ -522,6 +522,20 @@
 "pointsAgainst": 35,
 "pointsFor": 10,
 "result": "L"
+}
+},
+"12": {
+"Packers": {
+"opponent": "Rams",
+"pointsAgainst": 26,
+"pointsFor": 13,
+"result": "L"
+},
+"Rams": {
+"opponent": "Packers",
+"pointsAgainst": 13,
+"pointsFor": 26,
+"result": "W"
 }
 },
 "2": {

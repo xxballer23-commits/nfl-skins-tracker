@@ -1,7 +1,7 @@
 {
  "version": 2,
  "season": "2026",
- "updated": "2026-11-25T20:30:24+00:00",
+ "updated": "2026-11-26T14:01:32+00:00",
  "settings": {
   "skinValue": 100,
   "bonusEnabledByWeek": {
@@ -1871,7 +1871,18 @@
     "pointsAgainst": 33
    }
   },
-  "12": {},
+  "12": {
+   "Rams-W": {
+    "result": "W",
+    "pointsFor": 26,
+    "pointsAgainst": 13
+   },
+   "Packers-W": {
+    "result": "L",
+    "pointsFor": 13,
+    "pointsAgainst": 26
+   }
+  },
   "13": {},
   "14": {},
   "15": {},
