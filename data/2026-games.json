@@ -1,6 +1,6 @@
 {
 "season": 2026,
-"updated": "2026-11-26T20:14:56+00:00",
+"updated": "2026-11-27T14:00:12+00:00",
 "weeks": {
 "1": {
 "49ers": {
@@ -525,6 +525,42 @@
 }
 },
 "12": {
+"Bears": {
+"opponent": "Lions",
+"pointsAgainst": 35,
+"pointsFor": 39,
+"result": "W"
+},
+"Bills": {
+"opponent": "Chiefs",
+"pointsAgainst": 10,
+"pointsFor": 13,
+"result": "W"
+},
+"Chiefs": {
+"opponent": "Bills",
+"pointsAgainst": 13,
+"pointsFor": 10,
+"result": "L"
+},
+"Cowboys": {
+"opponent": "Eagles",
+"pointsAgainst": 39,
+"pointsFor": 38,
+"result": "L"
+},
+"Eagles": {
+"opponent": "Cowboys",
+"pointsAgainst": 38,
+"pointsFor": 39,
+"result": "W"
+},
+"Lions": {
+"opponent": "Bears",
+"pointsAgainst": 39,
+"pointsFor": 35,
+"result": "L"
+},
 "Packers": {
 "opponent": "Rams",
 "pointsAgainst": 26,

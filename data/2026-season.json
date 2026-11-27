@@ -1,7 +1,7 @@
 {
  "version": 2,
  "season": "2026",
- "updated": "2026-11-26T20:14:56+00:00",
+ "updated": "2026-11-27T14:00:12+00:00",
  "settings": {
   "skinValue": 100,
   "bonusEnabledByWeek": {
@@ -1876,6 +1876,36 @@
     "result": "W",
     "pointsFor": 26,
     "pointsAgainst": 13
+   },
+   "Bills-W": {
+    "result": "W",
+    "pointsFor": 13,
+    "pointsAgainst": 10
+   },
+   "Lions-W": {
+    "result": "L",
+    "pointsFor": 35,
+    "pointsAgainst": 39
+   },
+   "Eagles-W": {
+    "result": "W",
+    "pointsFor": 39,
+    "pointsAgainst": 38
+   },
+   "Chiefs-W": {
+    "result": "L",
+    "pointsFor": 10,
+    "pointsAgainst": 13
+   },
+   "Bears-W": {
+    "result": "W",
+    "pointsFor": 39,
+    "pointsAgainst": 35
+   },
+   "Cowboys-W": {
+    "result": "L",
+    "pointsFor": 38,
+    "pointsAgainst": 39
    },
    "Packers-W": {
     "result": "L",
