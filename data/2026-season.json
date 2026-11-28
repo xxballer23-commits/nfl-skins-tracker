@@ -1,7 +1,7 @@
 {
  "version": 2,
  "season": "2026",
- "updated": "2026-11-27T20:01:51+00:00",
+ "updated": "2026-11-28T13:16:01+00:00",
  "settings": {
   "skinValue": 100,
   "bonusEnabledByWeek": {
@@ -1911,6 +1911,16 @@
     "result": "L",
     "pointsFor": 13,
     "pointsAgainst": 26
+   },
+   "Broncos-W": {
+    "result": "L",
+    "pointsFor": 5,
+    "pointsAgainst": 27
+   },
+   "Steelers-W": {
+    "result": "W",
+    "pointsFor": 27,
+    "pointsAgainst": 5
    }
   },
   "13": {},

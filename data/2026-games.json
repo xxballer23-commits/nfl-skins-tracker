@@ -1,6 +1,6 @@
 {
 "season": 2026,
-"updated": "2026-11-27T20:01:51+00:00",
+"updated": "2026-11-28T13:16:01+00:00",
 "weeks": {
 "1": {
 "49ers": {
@@ -537,6 +537,12 @@
 "pointsFor": 13,
 "result": "W"
 },
+"Broncos": {
+"opponent": "Steelers",
+"pointsAgainst": 27,
+"pointsFor": 5,
+"result": "L"
+},
 "Chiefs": {
 "opponent": "Bills",
 "pointsAgainst": 13,
@@ -571,6 +577,12 @@
 "opponent": "Packers",
 "pointsAgainst": 13,
 "pointsFor": 26,
+"result": "W"
+},
+"Steelers": {
+"opponent": "Broncos",
+"pointsAgainst": 5,
+"pointsFor": 27,
 "result": "W"
 }
 },
